@@ -1,0 +1,111 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://styles/button/frame/framebutton_blue_glow.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://styles/button/frame/framebutton_orange_glow.stylebox" type="StyleBox" id=2]
+[ext_resource path="res://styles/button/frame/framebutton_gray.stylebox" type="StyleBox" id=3]
+[ext_resource path="res://styles/button/frame/framebutton_blue.stylebox" type="StyleBox" id=4]
+[ext_resource path="res://scripts/ui/control/button/FrameButton.gd" type="Script" id=5]
+[ext_resource path="res://scenes/UI/buttons/framebutton/FrameSelector.tscn" type="PackedScene" id=6]
+[ext_resource path="res://textures/UI/buttons/frame/FrameSelectorAnimation.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 7 )
+region = Rect2( 288, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 7 )
+region = Rect2( 288, 288, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 288, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 96, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 7 )
+region = Rect2( 192, 96, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 7 )
+region = Rect2( 288, 96, 96, 96 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": false,
+"name": "Outtro",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": false,
+"name": "Intro",
+"speed": 24.0
+} ]
+
+[node name="FrameButton" type="Button"]
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FrameSelector" parent="." instance=ExtResource( 6 )]
+visible = false
+frames = SubResource( 17 )
+
+[node name="Icon" type="TextureRect" parent="."]
+visible = false
+margin_right = 96.0
+margin_bottom = 96.0
+[connection signal="animation_finished" from="FrameSelector" to="." method="_on_animation_finished"]

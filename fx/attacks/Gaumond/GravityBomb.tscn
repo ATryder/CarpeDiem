@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://shaders/unshaded/gradient/Billboard/Masked_Shockwave.shader" type="Shader" id=1]
+[ext_resource path="res://fx/Debris.tscn" type="PackedScene" id=2]
+[ext_resource path="res://shaders/unshaded/gradient/Masked_TexGrad.shader" type="Shader" id=3]
+[ext_resource path="res://textures/fx/cloud/cloud_1024.png" type="Texture" id=4]
+[ext_resource path="res://fx/attacks/Gaumond/GravityBomb.gd" type="Script" id=5]
+[ext_resource path="res://materials/fx/particles/Sparks_Purple.material" type="Material" id=6]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = 127
+shader = ExtResource( 1 )
+shader_param/reverse = true
+shader_param/radius = 0.5
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/col1 = Color( 0.686275, 0, 1, 0 )
+shader_param/col2 = Color( 1, 0.890196, 0.972549, 1 )
+shader_param/col3 = Color( 0.847059, 0.470588, 1, 1 )
+shader_param/col4 = Color( 0.823529, 0.470588, 1, 0.568627 )
+shader_param/col5 = Color( 0.686275, 0, 1, 0 )
+shader_param/col6 = Color( 0.686275, 0, 1, 0 )
+shader_param/pos1 = 0.85
+shader_param/pos2 = 0.86
+shader_param/pos3 = 0.9
+shader_param/pos4 = 0.91
+shader_param/pos5 = 0.95
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+
+[sub_resource type="QuadMesh" id=2]
+size = Vector2( 32, 32 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.0106383, 0.269504 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.457447, 1, 1, 1, 1 )
+
+[sub_resource type="ShaderMaterial" id=4]
+render_priority = 127
+shader = ExtResource( 3 )
+shader_param/col1 = Color( 0, 0, 0, 1 )
+shader_param/col2 = Color( 0.0117647, 0.188235, 0.996078, 1 )
+shader_param/col3 = Color( 0.443137, 0.8, 0.996078, 1 )
+shader_param/pos1 = 0.2
+shader_param/pos2 = 0.5
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/tex = ExtResource( 4 )
+
+[sub_resource type="SphereMesh" id=5]
+radius = 0.95
+height = 1.9
+
+[sub_resource type="ShaderMaterial" id=6]
+render_priority = 127
+shader = ExtResource( 3 )
+shader_param/col1 = Color( 0, 0, 0, 1 )
+shader_param/col2 = Color( 0.717647, 0.054902, 0.988235, 1 )
+shader_param/col3 = Color( 0.988235, 0.0549019, 0.929902, 1 )
+shader_param/pos1 = 0.5
+shader_param/pos2 = 0.7
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/tex = ExtResource( 4 )
+
+[sub_resource type="SphereMesh" id=7]
+
+[node name="Shockwave" type="CPUParticles"]
+material_override = SubResource( 1 )
+emitting = false
+amount = 1
+lifetime = 0.15
+one_shot = true
+explosiveness = 1.0
+mesh = SubResource( 2 )
+gravity = Vector3( 0, 0, 0 )
+color_ramp = SubResource( 3 )
+script = ExtResource( 5 )
+
+[node name="Debris" parent="." instance=ExtResource( 2 )]
+material_override = ExtResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( -0.324859, 0, 0.945763, 0, 1, 0, -0.945763, 0, -0.324859, 0, 0, 0 )
+visible = false
+material_override = SubResource( 4 )
+cast_shadow = 0
+mesh = SubResource( 5 )
+skeleton = NodePath("")
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+visible = false
+material_override = SubResource( 6 )
+cast_shadow = 0
+mesh = SubResource( 7 )
+skeleton = NodePath("")
+material/0 = null

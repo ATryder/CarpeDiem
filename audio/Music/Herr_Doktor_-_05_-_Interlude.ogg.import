@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Herr_Doktor_-_05_-_Interlude.ogg-8a491bbdfdfe40e38006fa8b0b471f71.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Herr_Doktor_-_05_-_Interlude.ogg"
+dest_files=[ "res://.import/Herr_Doktor_-_05_-_Interlude.ogg-8a491bbdfdfe40e38006fa8b0b471f71.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

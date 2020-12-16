@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Chris_Zabriskie_-_06_-_Chance_Luck_Errors_in_Nature_Fate_Destruction_As_a_Finale.ogg-59f1b385ecf64d219e992d226c4db85f.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Chris_Zabriskie_-_06_-_Chance_Luck_Errors_in_Nature_Fate_Destruction_As_a_Finale.ogg"
+dest_files=[ "res://.import/Chris_Zabriskie_-_06_-_Chance_Luck_Errors_in_Nature_Fate_Destruction_As_a_Finale.ogg-59f1b385ecf64d219e992d226c4db85f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

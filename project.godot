@@ -1,0 +1,469 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "PlayerLoadout",
+"class": "AILoadout",
+"language": "GDScript",
+"path": "res://scripts/game/ai/AILoadout.gd"
+}, {
+"base": "Reference",
+"class": "AI_Task",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_AttackShip",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_AttackShip.gd"
+}, {
+"base": "AI_Task_AttackShip",
+"class": "AI_Task_AttackStation",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_AttackStation.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_BuildStation",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_BuildStation.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_CargoRepair",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_CargoRepair.gd"
+}, {
+"base": "AI_Task_AttackShip",
+"class": "AI_Task_Defend",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_Defend.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_Explore",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_Explore.gd"
+}, {
+"base": "Reference",
+"class": "AI_Task_PossibleAssignment",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_PossibleAssignment.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_Reload",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_Reload.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_Repair",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_Repair.gd"
+}, {
+"base": "AI_Task",
+"class": "AI_Task_Withdraw",
+"language": "GDScript",
+"path": "res://scripts/game/ai/tasks/AI_Task_Withdraw.gd"
+}, {
+"base": "HBoxContainer",
+"class": "Actions",
+"language": "GDScript",
+"path": "res://scripts/game/UI/ActionButtons.gd"
+}, {
+"base": "MeshInstance",
+"class": "BrownianSpawnFX",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/BrownianSpawnFX.gd"
+}, {
+"base": "Reference",
+"class": "BuildItem",
+"language": "GDScript",
+"path": "res://scripts/game/BuildItem.gd"
+}, {
+"base": "Control",
+"class": "BuildMenu",
+"language": "GDScript",
+"path": "res://scripts/game/UI/BuildMenu.gd"
+}, {
+"base": "Reference",
+"class": "CDIO",
+"language": "GDScript",
+"path": "res://scripts/util/CDIO.gd"
+}, {
+"base": "Node",
+"class": "CDTile",
+"language": "GDScript",
+"path": "res://scripts/game/CDTile.gd"
+}, {
+"base": "Emitter",
+"class": "CircleEmitter",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/emitter/CircleEmitter.gd"
+}, {
+"base": "Unit",
+"class": "CommandStation",
+"language": "GDScript",
+"path": "res://scripts/game/units/CommandStation.gd"
+}, {
+"base": "ControlTrans_Wipe",
+"class": "ControlTrans_Blinds",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_Blinds.gd"
+}, {
+"base": "ControlTrans_Wipe",
+"class": "ControlTrans_CheckerWipe",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_CheckerWipe.gd"
+}, {
+"base": "ControlTrans_ColumnWipe",
+"class": "ControlTrans_ColumnSwirl",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_ColumnSwirl.gd"
+}, {
+"base": "ControlTrans_Wipe",
+"class": "ControlTrans_ColumnWipe",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_ColumnWipe.gd"
+}, {
+"base": "ControlTrans_Blinds",
+"class": "ControlTrans_ContraBlinds",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_ContraBlinds.gd"
+}, {
+"base": "ControlTrans_Wipe",
+"class": "ControlTrans_ContraWipe",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_ContraWipe.gd"
+}, {
+"base": "ControlTransition",
+"class": "ControlTrans_Wipe",
+"language": "GDScript",
+"path": "res://scripts/ui/control_animators/ControlTrans_Wipe.gd"
+}, {
+"base": "TextureRect",
+"class": "ControlTransition",
+"language": "GDScript",
+"path": "res://scripts/ui/ControlTransition.gd"
+}, {
+"base": "Reference",
+"class": "Emitter",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/emitter/Emitter.gd"
+}, {
+"base": "Spatial",
+"class": "EngineFX",
+"language": "GDScript",
+"path": "res://fx/engine/EngineFX.gd"
+}, {
+"base": "MeshInstance",
+"class": "EngineSparks",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/EngineSparks.gd"
+}, {
+"base": "Button",
+"class": "FrameButton",
+"language": "GDScript",
+"path": "res://scripts/ui/control/button/FrameButton.gd"
+}, {
+"base": "Spatial",
+"class": "Game",
+"language": "GDScript",
+"path": "res://scripts/game/Game.gd"
+}, {
+"base": "MeshInstance",
+"class": "GhostUnit",
+"language": "GDScript",
+"path": "res://scripts/game/units/GhostUnit.gd"
+}, {
+"base": "MeshInstance2D",
+"class": "GraphLine",
+"language": "GDScript",
+"path": "res://scripts/shape/GraphLine.gd"
+}, {
+"base": "Reference",
+"class": "LevelGenerator",
+"language": "GDScript",
+"path": "res://scripts/game/generators/Level_Generator.gd"
+}, {
+"base": "Emitter",
+"class": "MeshEmitter",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/emitter/MeshEmitter.gd"
+}, {
+"base": "PanelContainer_Themeable",
+"class": "MessageDialog",
+"language": "GDScript",
+"path": "res://scripts/ui/MessageDialog.gd"
+}, {
+"base": "Reference",
+"class": "MethodRef",
+"language": "GDScript",
+"path": "res://scripts/util/MethodRef.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "MusicStreamPlayer",
+"language": "GDScript",
+"path": "res://audio/MusicStreamPlayer.gd"
+}, {
+"base": "PanelContainer",
+"class": "PanelContainer_Themeable",
+"language": "GDScript",
+"path": "res://scripts/ui/control/PanelContainer_Themeable.gd"
+}, {
+"base": "Spatial",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/game/Player.gd"
+}, {
+"base": "Reference",
+"class": "PlayerLoadout",
+"language": "GDScript",
+"path": "res://scripts/game/PlayerLoadout.gd"
+}, {
+"base": "Player",
+"class": "Player_AI",
+"language": "GDScript",
+"path": "res://scripts/game/ai/Player_AI.gd"
+}, {
+"base": "Reference",
+"class": "PossibleStationArea",
+"language": "GDScript",
+"path": "res://scripts/game/ai/PossibleStationArea.gd"
+}, {
+"base": "Emitter",
+"class": "QuadEmitter",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/emitter/QuadEmitter.gd"
+}, {
+"base": "Node2D",
+"class": "QuickInfo",
+"language": "GDScript",
+"path": "res://scenes/QuickInfo/QuickInfo.gd"
+}, {
+"base": "LevelGenerator",
+"class": "SaveLoader",
+"language": "GDScript",
+"path": "res://scripts/game/generators/SaveLoader.gd"
+}, {
+"base": "Reference",
+"class": "SavedGame",
+"language": "GDScript",
+"path": "res://scripts/util/SavedGame.gd"
+}, {
+"base": "Reference",
+"class": "Simplex3D",
+"language": "GDScript",
+"path": "res://scripts/util/Simplex3d.gd"
+}, {
+"base": "LevelGenerator",
+"class": "SimplexGenerator",
+"language": "GDScript",
+"path": "res://scripts/game/generators/RandomSimplex.gd"
+}, {
+"base": "Reference",
+"class": "SnapshotAnalyzer",
+"language": "GDScript",
+"path": "res://scripts/util/SnapshotAnalyzer.gd"
+}, {
+"base": "Emitter",
+"class": "SphereEmitter",
+"language": "GDScript",
+"path": "res://scripts/game/fx/particles/emitter/SphereEmitter.gd"
+}, {
+"base": "Reference",
+"class": "TerritoryGenerator",
+"language": "GDScript",
+"path": "res://scripts/game/TerritoryGenerator.gd"
+}, {
+"base": "TextureButton",
+"class": "ToggleButton",
+"language": "GDScript",
+"path": "res://scripts/ui/control/button/ToggleButton.gd"
+}, {
+"base": "ToggleButton",
+"class": "TurnButton",
+"language": "GDScript",
+"path": "res://scripts/ui/control/button/TurnButton.gd"
+}, {
+"base": "Reference",
+"class": "Turn_Snapshot",
+"language": "GDScript",
+"path": "res://scripts/util/Turn_Snapshot.gd"
+}, {
+"base": "Reference",
+"class": "Tutorial",
+"language": "GDScript",
+"path": "res://scripts/game/Tutorial.gd"
+}, {
+"base": "Spatial",
+"class": "Unit",
+"language": "GDScript",
+"path": "res://scripts/game/units/Unit.gd"
+}, {
+"base": "Reference",
+"class": "Vector2i",
+"language": "GDScript",
+"path": "res://scripts/util/Vector2i.gd"
+} ]
+_global_script_class_icons={
+"AILoadout": "",
+"AI_Task": "",
+"AI_Task_AttackShip": "",
+"AI_Task_AttackStation": "",
+"AI_Task_BuildStation": "",
+"AI_Task_CargoRepair": "",
+"AI_Task_Defend": "",
+"AI_Task_Explore": "",
+"AI_Task_PossibleAssignment": "",
+"AI_Task_Reload": "",
+"AI_Task_Repair": "",
+"AI_Task_Withdraw": "",
+"Actions": "",
+"BrownianSpawnFX": "",
+"BuildItem": "",
+"BuildMenu": "",
+"CDIO": "",
+"CDTile": "",
+"CircleEmitter": "",
+"CommandStation": "",
+"ControlTrans_Blinds": "",
+"ControlTrans_CheckerWipe": "",
+"ControlTrans_ColumnSwirl": "",
+"ControlTrans_ColumnWipe": "",
+"ControlTrans_ContraBlinds": "",
+"ControlTrans_ContraWipe": "",
+"ControlTrans_Wipe": "",
+"ControlTransition": "",
+"Emitter": "",
+"EngineFX": "",
+"EngineSparks": "",
+"FrameButton": "",
+"Game": "",
+"GhostUnit": "",
+"GraphLine": "",
+"LevelGenerator": "",
+"MeshEmitter": "",
+"MessageDialog": "",
+"MethodRef": "",
+"MusicStreamPlayer": "",
+"PanelContainer_Themeable": "",
+"Player": "",
+"PlayerLoadout": "",
+"Player_AI": "",
+"PossibleStationArea": "",
+"QuadEmitter": "",
+"QuickInfo": "",
+"SaveLoader": "",
+"SavedGame": "",
+"Simplex3D": "",
+"SimplexGenerator": "",
+"SnapshotAnalyzer": "",
+"SphereEmitter": "",
+"TerritoryGenerator": "",
+"ToggleButton": "",
+"TurnButton": "",
+"Turn_Snapshot": "",
+"Tutorial": "",
+"Unit": "",
+"Vector2i": ""
+}
+
+[application]
+
+config/name="Carpe Diem"
+run/main_scene="res://scenes/UI/menus/MainMenu.tscn"
+boot_splash/image="res://black32.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://icon.png"
+config/windows_native_icon="res://icons/icon.ico"
+config/name_en="Carpe Diem"
+
+[autoload]
+
+Math="*res://scripts/util/Math.gd"
+CD="*res://scripts/Globals.gd"
+Audio="*res://scripts/Audio.gd"
+Music="*res://scripts/Music.gd"
+Opts="*res://scripts/Options.gd"
+Dossier="*res://scripts/Dossier.gd"
+SceneLoader="*res://scripts/SceneLoader.gd"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="res://default_theme.theme"
+theme/custom_font="res://fonts/DefaultFont.tres"
+
+[input]
+
+camera_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"unicode":0,"echo":false,"script":null)
+ ]
+}
+camera_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"unicode":0,"echo":false,"script":null)
+ ]
+}
+camera_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"unicode":0,"echo":false,"script":null)
+ ]
+}
+camera_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"unicode":0,"echo":false,"script":null)
+ ]
+}
+camera_zoom_in={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":61,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777349,"unicode":0,"echo":false,"script":null)
+ ]
+}
+camera_zoom_out={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":45,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777347,"unicode":0,"echo":false,"script":null)
+ ]
+}
+end_turn={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+game_menu={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[locale]
+
+translations=PoolStringArray( "res://localization/cd_strings.en.translation" )
+
+[logging]
+
+file_logging/enable_file_logging=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
+environment/default_environment="res://default_env.tres"

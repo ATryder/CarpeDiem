@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/DebrisField_metal_rough_spec.png-e11332331aa01cd1593029fb33f39729.s3tc.stex"
+path.etc2="res://.import/DebrisField_metal_rough_spec.png-e11332331aa01cd1593029fb33f39729.etc2.stex"
+path.etc="res://.import/DebrisField_metal_rough_spec.png-e11332331aa01cd1593029fb33f39729.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2", "etc" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://models/props/DebrisField/Tex/DebrisField_metal_rough_spec.png"
+dest_files=[ "res://.import/DebrisField_metal_rough_spec.png-e11332331aa01cd1593029fb33f39729.s3tc.stex", "res://.import/DebrisField_metal_rough_spec.png-e11332331aa01cd1593029fb33f39729.etc2.stex", "res://.import/DebrisField_metal_rough_spec.png-e11332331aa01cd1593029fb33f39729.etc.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=2
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=true
+flags/srgb=0
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

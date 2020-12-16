@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://shaders/unshaded/gradient/Billboard/Masked_CircleGrad.shader" type="Shader" id=1]
+[ext_resource path="res://scripts/game/fx/particles/Particles_OneShot.gd" type="Script" id=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = 127
+shader = ExtResource( 1 )
+shader_param/radius = 0.5
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/col1 = Color( 0.996094, 0.933838, 0.74707, 1 )
+shader_param/col2 = Color( 1, 0.866176, 0.341177, 1 )
+shader_param/col3 = Color( 0, 0, 0, 0 )
+shader_param/pos1 = 0.25
+shader_param/pos2 = 0.85
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+
+[sub_resource type="QuadMesh" id=2]
+size = Vector2( 8, 8 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0 ), 0.0, 0.940667, 0, 0, Vector2( 1, 1 ), 1.09682, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 0 )
+
+[node name="Flash" type="CPUParticles"]
+material_override = SubResource( 1 )
+emitting = false
+amount = 1
+lifetime = 0.2
+one_shot = true
+explosiveness = 1.0
+mesh = SubResource( 2 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.0
+scale_amount_random = 0.3
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
+script = ExtResource( 2 )
+

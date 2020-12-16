@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Herr_Doktor_-_09_-_Moon_Garden_feat_Cavaliers_of_Fun_Reprise.ogg-7e878c25e28569ddc89ffa6d934b2edf.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Herr_Doktor/Herr_Doktor_-_09_-_Moon_Garden_feat_Cavaliers_of_Fun_Reprise.ogg"
+dest_files=[ "res://.import/Herr_Doktor_-_09_-_Moon_Garden_feat_Cavaliers_of_Fun_Reprise.ogg-7e878c25e28569ddc89ffa6d934b2edf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=2]
+
+[ext_resource path="res://shaders/shaded/Masked_bsdf.shader" type="Shader" id=1]
+[ext_resource path="res://models/props/Asteroids/Tex/AsteroidDiff.png" type="Texture" id=2]
+[ext_resource path="res://models/props/Asteroids/Tex/AsteroidNorm.png" type="Texture" id=3]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.995745 )
+colors = PoolColorArray( 0, 0.901961, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 64
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/color = Color( 0.388235, 0.388235, 0.388235, 1 )
+shader_param/albedo_paint = Color( 0, 0, 0, 1 )
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+shader_param/fog = null
+shader_param/alpha_mod = 0.0
+shader_param/is_ghost = 1.0
+shader_param/texture_albedo = ExtResource( 2 )
+shader_param/texture_combined = SubResource( 2 )
+shader_param/texture_normal = ExtResource( 3 )

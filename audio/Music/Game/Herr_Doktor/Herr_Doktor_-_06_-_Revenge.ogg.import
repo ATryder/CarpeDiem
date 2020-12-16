@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Herr_Doktor_-_06_-_Revenge.ogg-5d80b598c9f7177ba4c8c9d6ded97fd9.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Herr_Doktor/Herr_Doktor_-_06_-_Revenge.ogg"
+dest_files=[ "res://.import/Herr_Doktor_-_06_-_Revenge.ogg-5d80b598c9f7177ba4c8c9d6ded97fd9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

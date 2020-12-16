@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://fx/Heal_Sphere/heal_sphere.tscn" type="PackedScene" id=1]
+
+[node name="heal_sphere" instance=ExtResource( 1 )]
+transform = Transform( 3.854, 0, 0, 0, 3, 0, 0, 0, 7.833, 0, 0, 0 )

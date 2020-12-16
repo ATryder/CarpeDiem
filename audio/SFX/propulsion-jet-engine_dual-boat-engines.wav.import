@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/propulsion-jet-engine_dual-boat-engines.wav-b9787d3169899530230942b37918d435.sample"
+
+[deps]
+
+source_file="res://audio/SFX/propulsion-jet-engine_dual-boat-engines.wav"
+dest_files=[ "res://.import/propulsion-jet-engine_dual-boat-engines.wav-b9787d3169899530230942b37918d435.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=1

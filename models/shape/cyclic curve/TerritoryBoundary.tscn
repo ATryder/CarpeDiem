@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://shaders/unshaded/gradient/Masked_Tex.shader" type="Shader" id=1]
+[ext_resource path="res://textures/fx/gradients/territory/territory_blue.png" type="Texture" id=2]
+[ext_resource path="res://models/shape/cyclic curve/CyclicCurve.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = -5
+shader = ExtResource( 1 )
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/alpha_mod = 0.0
+shader_param/tex = ExtResource( 2 )
+
+[node name="TerritoryBoundary" type="MeshInstance"]
+material_override = SubResource( 1 )
+cast_shadow = 0
+script = ExtResource( 3 )
+width = 2.0
+offset = 1.0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ezylohm_tek_-_04_-_Mankind.ogg-dac2b4ebbb650627d33f335b7e5e3d46.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Ezylohm_tek/Ezylohm_tek_-_04_-_Mankind.ogg"
+dest_files=[ "res://.import/Ezylohm_tek_-_04_-_Mankind.ogg-dac2b4ebbb650627d33f335b7e5e3d46.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

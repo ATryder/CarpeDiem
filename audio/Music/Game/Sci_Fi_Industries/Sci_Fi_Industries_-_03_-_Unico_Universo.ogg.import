@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sci_Fi_Industries_-_03_-_Unico_Universo.ogg-e66f218d7dbdd7957a2fffac8b520610.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Sci_Fi_Industries/Sci_Fi_Industries_-_03_-_Unico_Universo.ogg"
+dest_files=[ "res://.import/Sci_Fi_Industries_-_03_-_Unico_Universo.ogg-e66f218d7dbdd7957a2fffac8b520610.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

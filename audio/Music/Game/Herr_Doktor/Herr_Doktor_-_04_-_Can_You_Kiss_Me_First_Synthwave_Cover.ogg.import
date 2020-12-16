@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Herr_Doktor_-_04_-_Can_You_Kiss_Me_First_Synthwave_Cover.ogg-91a63515fffd5adacd62b31f623ad9ba.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Herr_Doktor/Herr_Doktor_-_04_-_Can_You_Kiss_Me_First_Synthwave_Cover.ogg"
+dest_files=[ "res://.import/Herr_Doktor_-_04_-_Can_You_Kiss_Me_First_Synthwave_Cover.ogg-91a63515fffd5adacd62b31f623ad9ba.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

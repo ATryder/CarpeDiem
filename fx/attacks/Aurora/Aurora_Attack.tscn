@@ -1,0 +1,25 @@
+[gd_scene format=2]
+
+[node name="Aurora_Attack" type="Spatial"]
+
+[node name="Front_Gun_Root" type="Spatial" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35627, 3.25532 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Front_Gun_Barrel" type="Spatial" parent="Front_Gun_Root" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.64752 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Rear_Gun_Root" type="Spatial" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.61548, -0.33893 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Rear_Gun_Barrel" type="Spatial" parent="Rear_Gun_Root" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.63891 )
+_sections_unfolded = [ "Transform" ]
+
+

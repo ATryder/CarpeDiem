@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/DebrisField_Combined.png-49479125e4124f32ffa086c1afab2f86.s3tc.stex"
+path.etc2="res://.import/DebrisField_Combined.png-49479125e4124f32ffa086c1afab2f86.etc2.stex"
+path.etc="res://.import/DebrisField_Combined.png-49479125e4124f32ffa086c1afab2f86.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2", "etc" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://models/props/DebrisField/Tex/DebrisField_Combined.png"
+dest_files=[ "res://.import/DebrisField_Combined.png-49479125e4124f32ffa086c1afab2f86.s3tc.stex", "res://.import/DebrisField_Combined.png-49479125e4124f32ffa086c1afab2f86.etc2.stex", "res://.import/DebrisField_Combined.png-49479125e4124f32ffa086c1afab2f86.etc.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=2
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=true
+flags/srgb=0
+process/fix_alpha_border=false
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://textures/UI/frame_gray48.atlastex" type="Texture" id=1]
+[ext_resource path="res://textures/UI/frame_glow_cyan48.atlastex" type="Texture" id=2]
+[ext_resource path="res://textures/UI/frame_glow_gray48.atlastex" type="Texture" id=3]
+[ext_resource path="res://scripts/ui/control/button/ToggleButton.gd" type="Script" id=4]
+[ext_resource path="res://textures/UI/frame_purple48.atlastex" type="Texture" id=5]
+[ext_resource path="res://textures/UI/frame_glow_purple48.atlastex" type="Texture" id=6]
+[ext_resource path="res://textures/UI/frame_glow_green48.atlastex" type="Texture" id=7]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+light_mode = 1
+
+[node name="ToggleButton" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -976.0
+margin_bottom = -552.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 1 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+normal_normal = ExtResource( 1 )
+normal_pressed = ExtResource( 2 )
+normal_hover = ExtResource( 3 )
+normal_disabled = ExtResource( 1 )
+toggled_normal = ExtResource( 5 )
+toggled_pressed = ExtResource( 7 )
+toggled_hover = ExtResource( 6 )
+toggled_disabled = ExtResource( 1 )
+isToggle = true
+
+[node name="Icon" type="TextureRect" parent="."]
+material = SubResource( 1 )
+margin_right = 48.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,755 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://scenes/UI/credits/texture/stars.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Credits.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_CheckerWipe.gd" type="Script" id=4]
+[ext_resource path="res://fonts/SFPixelate.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scenes/UI/credits/texture/CargoShip32.atlastex" type="Texture" id=6]
+[ext_resource path="res://scenes/UI/credits/texture/CommandStation32.atlastex" type="Texture" id=7]
+[ext_resource path="res://scenes/UI/credits/texture/NightHawk32.atlastex" type="Texture" id=8]
+[ext_resource path="res://audio/Music/Rushjet1_-_08_-_World_10_Azureflux_Remix.ogg" type="AudioStream" id=9]
+[ext_resource path="res://audio/SFX/clonk.wav" type="AudioStream" id=10]
+[ext_resource path="res://scenes/UI/credits/Credits.gd" type="Script" id=11]
+[ext_resource path="res://scenes/UI/credits/texture/godot_logo.png" type="Texture" id=12]
+[ext_resource path="res://scenes/UI/credits/texture/blender_logo.png" type="Texture" id=13]
+[ext_resource path="res://scenes/UI/credits/texture/gimp-logo.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+extra_spacing_char = 57
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+length = 124.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Stars:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 22.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -249, -1624 ), Vector2( -249, 2030 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Title:visible")
+tracks/1/interp = 0
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9, 6.72378 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Developed:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 8.3, 14.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Stars:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = false
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 22.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Tested:visible")
+tracks/4/interp = 0
+tracks/4/loop_wrap = false
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 15.7, 22.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Credits:visible")
+tracks/5/interp = 0
+tracks/5/loop_wrap = false
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 25, 111.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Credits:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = false
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 25, 108 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 406 ), Vector2( 0, -5300 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CargoShip:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = false
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 32.3, 33.8, 35.8, 37.5, 62.2, 63, 64.2, 64.3, 111.1, 111.2, 113 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -82, 217 ), Vector2( -82, 217 ), Vector2( 126, 218 ), Vector2( 126, 218 ), Vector2( 126, -64 ), Vector2( 723, -102 ), Vector2( 723, 267.85 ), Vector2( -64, 267.85 ), Vector2( -82.7178, 507.688 ), Vector2( 990.672, 492.688 ), Vector2( 979, 194 ), Vector2( 552, 194 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CargoShip:rotation_degrees")
+tracks/8/interp = 0
+tracks/8/loop_wrap = false
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 35.8, 62.2, 63, 111.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -90.0, -180.0, 0.0, 90.0, 90.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("NightHawk:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = false
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 41.6, 48, 80.5, 90, 114.5, 114.6, 116.5, 120.3, 122.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 833, 480 ), Vector2( 733, 480 ), Vector2( 733, -65 ), Vector2( 148, -67 ), Vector2( 148, 466 ), Vector2( -69, 467 ), Vector2( -83, 194 ), Vector2( 352, 194 ), Vector2( 352, 194 ), Vector2( -78, 194 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("NightHawk:rotation_degrees")
+tracks/10/interp = 0
+tracks/10/loop_wrap = false
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 80.5, 114.6, 119.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0, 0.0, -90.0, 90.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("CommandStation:position")
+tracks/11/interp = 0
+tracks/11/loop_wrap = false
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 118.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 662, 485 ), Vector2( 552, 194 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("CargoShip:visible")
+tracks/12/interp = 0
+tracks/12/loop_wrap = false
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 118.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("CommandStation:visible")
+tracks/13/interp = 0
+tracks/13/loop_wrap = false
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 123.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/14/type = "audio"
+tracks/14/path = NodePath("ConstructStation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 118.3, 123.2 )
+}
+tracks/15/type = "audio"
+tracks/15/path = NodePath("Music")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 9 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("1337 Gallery:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 123.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 5 )
+
+[node name="Credits" type="PanelContainer" groups=[
+"interface_themeable",
+]]
+margin_right = -83.9999
+margin_bottom = -158.0
+rect_min_size = Vector2( 96, 96 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreditsDisplay" type="Control" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 921.0
+margin_bottom = 430.0
+rect_min_size = Vector2( 902, 406 )
+rect_clip_content = true
+
+[node name="Stars" type="Sprite" parent="CreditsDisplay"]
+position = Vector2( -249, -1624 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Stars2" type="Sprite" parent="CreditsDisplay/Stars"]
+position = Vector2( -156, -812 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Title" type="Label" parent="CreditsDisplay"]
+visible = false
+margin_left = 33.0
+margin_top = 173.0
+margin_right = 870.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "CARPE DIEM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Developed" type="Label" parent="CreditsDisplay"]
+visible = false
+margin_top = 152.0
+margin_right = 902.0
+margin_bottom = 243.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Developed By
+Adam T. Ryder"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tested" type="Label" parent="CreditsDisplay"]
+visible = false
+margin_top = 119.0
+margin_right = 902.0
+margin_bottom = 257.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Tested By
+Jennifer S. Howard
+Adam T. Ryder"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CreditsDisplay"]
+anims/Credits = SubResource( 3 )
+
+[node name="Credits" type="Control" parent="CreditsDisplay"]
+visible = false
+margin_top = -4591.91
+margin_right = 40.0
+margin_bottom = -4551.91
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = -10.0
+margin_top = 3.0
+margin_right = 914.0
+margin_bottom = 94.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "FONTS:
+Courtesy of FontLibrary.org"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits2" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 95.0
+margin_right = 903.0
+margin_bottom = 186.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Severin Meyer
+Steward C. Russel
+Derek Vogelpohl"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits5" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 306.0
+margin_right = 903.0
+margin_bottom = 359.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SOUND FX:
+Courtesy of FreeSound.org"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits6" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 494.0
+margin_right = 903.0
+margin_bottom = 575.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "MUSIC:
+Courtesy of
+FreeMusicArchive.org"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits7" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 637.0
+margin_right = 903.0
+margin_bottom = 822.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Mankind
+by
+Ezylohm_tek
+CD by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits8" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 871.0
+margin_right = 903.0
+margin_bottom = 1056.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Oceanids
+by
+Ezylohm_tek
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits9" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 1105.0
+margin_right = 902.0
+margin_bottom = 1290.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Revenge
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits10" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 1340.0
+margin_right = 903.0
+margin_bottom = 1525.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "So Close
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits11" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 1576.0
+margin_right = 903.0
+margin_bottom = 1808.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Can You Kiss Me First
+(Synthwave Cover)
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits12" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 1858.0
+margin_right = 903.0
+margin_bottom = 2090.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Neon Riding
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits13" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 2093.0
+margin_right = 903.0
+margin_bottom = 2325.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Time for Love
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits14" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 2327.0
+margin_right = 902.0
+margin_bottom = 2559.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "The Night Heat
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits15" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 2563.0
+margin_right = 903.0
+margin_bottom = 2795.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Interlude
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits16" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 2798.0
+margin_right = 902.0
+margin_bottom = 3030.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Moon Garden (feat Cavaliers
+of Fun Reprise)
+by
+Herr Doktor
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits17" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 3314.0
+margin_right = 902.0
+margin_bottom = 3546.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Status Hex
+by
+Sci-Fi Industries
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits23" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = 1.0
+margin_top = 3076.0
+margin_right = 903.0
+margin_bottom = 3308.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "MAMO
+by
+Sci-Fi Industries
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits18" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 3549.0
+margin_right = 902.0
+margin_bottom = 3781.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Bault
+by
+Sci-Fi Industries
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits19" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 3784.0
+margin_right = 902.0
+margin_bottom = 4016.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Mount Rey
+by
+Sci-Fi Industries
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits20" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 4020.0
+margin_right = 902.0
+margin_bottom = 4252.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Unico Universo
+by
+Sci-Fi Industries
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits21" type="Label" parent="CreditsDisplay/Credits"]
+margin_top = 4254.0
+margin_right = 902.0
+margin_bottom = 4486.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Jyib
+by
+Sci-Fi Industries
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits22" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = -1.0
+margin_top = 4487.0
+margin_right = 903.0
+margin_bottom = 4624.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Chance, Luck, Errors in Nature,
+Fate, Destruction, As a Finale
+by
+Chris Zabriskie
+CC by-nc-sa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits24" type="Label" parent="CreditsDisplay/Credits"]
+margin_left = -1.0
+margin_top = 4758.0
+margin_right = 902.0
+margin_bottom = 4895.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Catering provided by
+Jennifer S. Howard"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="godot_logo" type="Sprite" parent="CreditsDisplay/Credits"]
+position = Vector2( 200, 4982 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 12 )
+
+[node name="blender_logo" type="Sprite" parent="CreditsDisplay/Credits"]
+position = Vector2( 456, 4982 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+
+[node name="gimp-logo" type="Sprite" parent="CreditsDisplay/Credits"]
+position = Vector2( 692, 4998 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 14 )
+
+[node name="CargoShip" type="Sprite" parent="CreditsDisplay"]
+position = Vector2( -82, 217 )
+rotation = -1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )
+
+[node name="CommandStation" type="Sprite" parent="CreditsDisplay"]
+position = Vector2( 662, 485 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+
+[node name="NightHawk" type="Sprite" parent="CreditsDisplay"]
+position = Vector2( 833, 480 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+
+[node name="1337 Gallery" type="Label" parent="CreditsDisplay"]
+visible = false
+margin_left = 273.0
+margin_top = 162.0
+margin_right = 611.0
+margin_bottom = 206.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1337 Gallery"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="address" type="Label" parent="CreditsDisplay/1337 Gallery"]
+margin_left = -19.0
+margin_top = 60.0
+margin_right = 387.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "https://1337atr.weebly.com"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer2D" parent="CreditsDisplay"]
+stream = ExtResource( 9 )
+bus = "UIMusic"
+
+[node name="ConstructStation" type="AudioStreamPlayer2D" parent="CreditsDisplay"]
+stream = ExtResource( 10 )
+bus = "FX"
+
+[node name="ControlTrans_CheckerWipe" type="TextureRect" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 921.0
+margin_bottom = 430.0
+script = ExtResource( 4 )
+length = 0.5
+playOnStart = true
+color = Color( 0.101961, 0, 1, 1 )
+edgeSize = 0.3
+leadingFade = 0.3
+trailingFade = 0.3
+grid = Vector2( 256, 128 )
+squareLength = 0.2

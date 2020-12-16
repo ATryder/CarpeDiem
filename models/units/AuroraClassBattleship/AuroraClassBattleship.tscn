@@ -1,0 +1,40 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://models/units/AuroraClassBattleship/AuroraClassBattleship.dae" type="PackedScene" id=1]
+[ext_resource path="res://scripts/game/units/Unit.gd" type="Script" id=2]
+[ext_resource path="res://scenes/UI/action buttons/ActionButton_Basic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fx/engine/Aurora_EngineFX.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/game/units/animations/aurora_attack.gd" type="Script" id=5]
+[ext_resource path="res://fx/attacks/Aurora/Aurora_Attack.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/game/units/animations/laser_attack.gd" type="Script" id=7]
+[ext_resource path="res://fx/attacks/Aurora/Aurora_Attack_Laser.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/game/units/animations/destroy_unit_bigblast.gd" type="Script" id=9]
+[ext_resource path="res://fx/unit_expolsion/Exp_Shockwave.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/units/AuroraClassBattleship/AuroraClassBattleshipMat.tres" type="Material" id=11]
+
+[node name="AuroraClassBattleship" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+moveRange = 6.0
+attackRange = 4.0
+minAttackRange = 1.0
+visibilityRange = 7.0
+type = 4
+geomPath = NodePath("Armature/Skeleton/AuroraClassBattleship")
+actionButtonScene = ExtResource( 3 )
+engineFX = ExtResource( 4 )
+max_attacks = 1
+max_moves = 1
+attackAnimation = ExtResource( 5 )
+attackWeaponSpawn = ExtResource( 6 )
+numberOfAttackShots = 2
+attackFaceVector = Vector3( 1, 0, 0 )
+counterAttackAnimation = ExtResource( 7 )
+counterAttackWeaponSpawn = ExtResource( 8 )
+randomCounterAttackWeaponSpawn = true
+numberOfCounterAttackShots = 8
+counterAttackFaceVector = Vector3( 1, 0, 0 )
+destroyAnimation = ExtResource( 9 )
+destroyFX = ExtResource( 10 )
+
+[node name="AuroraClassBattleship" parent="Armature/Skeleton" index="0"]
+material/0 = ExtResource( 11 )

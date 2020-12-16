@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/loadMPA.wav-721136e69285d5c40da46f9b1bc69eee.sample"
+
+[deps]
+
+source_file="res://audio/SFX/loadMPA.wav"
+dest_files=[ "res://.import/loadMPA.wav-721136e69285d5c40da46f9b1bc69eee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=1

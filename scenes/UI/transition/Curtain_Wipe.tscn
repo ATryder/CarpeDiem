@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_Wipe.gd" type="Script" id=1]
+
+[node name="ControlTrans_Wipe" type="TextureRect"]
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+length = 2.0
+reverse = true
+reattach = false
+offset = 0.5
+color = Color( 1, 1, 0, 1 )
+edgeSize = 0.3
+angle = 1.57

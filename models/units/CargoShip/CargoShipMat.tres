@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://models/units/CargoShip/Tex/CargoShip_Combined.png" type="Texture" id=1]
+[ext_resource path="res://models/units/CargoShip/Tex/CargoShip_Albedo.png" type="Texture" id=2]
+[ext_resource path="res://shaders/shaded/Masked_bsdf.shader" type="Shader" id=3]
+[ext_resource path="res://models/units/CargoShip/Tex/CargoShip_Norm.png" type="Texture" id=5]
+
+[resource]
+render_priority = 2
+shader = ExtResource( 3 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/albedo_paint = Color( 0, 0, 1, 1 )
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+shader_param/fog = null
+shader_param/alpha_mod = 0.0
+shader_param/is_ghost = 0.0
+shader_param/texture_albedo = ExtResource( 2 )
+shader_param/texture_combined = ExtResource( 1 )
+shader_param/texture_normal = ExtResource( 5 )

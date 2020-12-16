@@ -1,0 +1,55 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://textures/fx/heal_distort.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type spatial;
+render_mode unshaded,blend_add,depth_draw_never,cull_back;
+
+uniform sampler2D tex : hint_white;
+uniform sampler2D distort : hint_white;
+uniform float distortAmount = 1.0;
+uniform vec2 texOffset = vec2(0.0, 0.0);
+
+uniform sampler2D mask_tex : hint_white;
+uniform vec2 mask_scale;
+uniform vec2 mask_offset;
+
+varying vec3 worldvert;
+
+void vertex() {
+	worldvert = (WORLD_MATRIX * vec4(VERTEX, 1.0)).xyz;
+}
+
+void fragment() {
+	vec2 dist = (texture(distort, UV).rg - vec2(0.5, 0.5) * vec2(2.0, 2.0)) * distortAmount;
+	vec4 col = texture(tex, UV2 + texOffset + dist);
+	
+	vec3 mask = texture(mask_tex, (worldvert.xz * mask_scale) + mask_offset).rgb;
+	col.a *= mask.g;
+	
+	if (col.a < 0.001) {
+		discard;
+	} else {
+		ALBEDO.rgb = col.rgb;
+		ALPHA = col.a;
+	}
+}"
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.0521173, 0.0944625, 0.136808, 1 )
+colors = PoolColorArray( 0, 1, 0.576471, 0, 0, 1, 0.578125, 1, 0.764706, 1, 0.901961, 1, 0, 1, 0.576471, 1, 0, 1, 0.576471, 0 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 1024
+
+[resource]
+render_priority = 127
+shader = SubResource( 1 )
+shader_param/distortAmount = 0.5
+shader_param/texOffset = Vector2( 1.25, 0 )
+shader_param/mask_scale = null
+shader_param/mask_offset = Vector2( 0, 0 )
+shader_param/tex = SubResource( 3 )
+shader_param/distort = ExtResource( 1 )

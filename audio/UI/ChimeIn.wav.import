@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ChimeIn.wav-257ab4e44a1d4c3a256409d86a195a37.sample"
+
+[deps]
+
+source_file="res://audio/UI/ChimeIn.wav"
+dest_files=[ "res://.import/ChimeIn.wav-257ab4e44a1d4c3a256409d86a195a37.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=1

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ezylohm_tek_-_05_-_Oceanids.ogg-00d8eb096eac69e6840d4498421c1d80.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Ezylohm_tek/Ezylohm_tek_-_05_-_Oceanids.ogg"
+dest_files=[ "res://.import/Ezylohm_tek_-_05_-_Oceanids.ogg-00d8eb096eac69e6840d4498421c1d80.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

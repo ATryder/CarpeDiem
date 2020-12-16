@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/shape/move indicator/movement_indicator.material" type="Material" id=1]
+[ext_resource path="res://models/shape/move indicator/MoveIndicator.gd" type="Script" id=2]
+
+[node name="MoveIndicator" type="MeshInstance"]
+material_override = ExtResource( 1 )
+script = ExtResource( 2 )
+width = 4.5
+segments = 24
+uvYsize = 0.16
+scrollSpeed = 1.25
+fadeLength = 0.5
+color = Color( 1, 1, 0, 1 )

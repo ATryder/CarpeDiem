@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Herr_Doktor_-_02_-_Time_for_Love.ogg-4182604c338f913a24bb68a1e330325a.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Herr_Doktor/Herr_Doktor_-_02_-_Time_for_Love.ogg"
+dest_files=[ "res://.import/Herr_Doktor_-_02_-_Time_for_Love.ogg-4182604c338f913a24bb68a1e330325a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

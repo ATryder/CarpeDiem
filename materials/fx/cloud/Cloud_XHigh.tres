@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://shaders/unshaded/fx/cloud/Cloud_Plane_XHigh.shader" type="Shader" id=1]
+[ext_resource path="res://textures/fx/cloud/cloud_1024.png" type="Texture" id=2]
+
+[resource]
+render_priority = -128
+shader = ExtResource( 1 )
+shader_param/uv_scale = null
+shader_param/timeScale = 0.001
+shader_param/offset = null
+shader_param/time = 0.0
+shader_param/frequency = 0.03
+shader_param/pixelOffset = 6.0
+shader_param/texPixelOffset = 12.0
+shader_param/texelSize = null
+shader_param/paddingWidth = 0.0001
+shader_param/paddingHeight = 0.0001
+shader_param/fogUnmapped = null
+shader_param/fogMapped = null
+shader_param/displace_tex = ExtResource( 2 )

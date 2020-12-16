@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2018-08-21T04:40:21Z</created>
+	<modified>2018-08-21T04:40:21Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Armature" name="Armature" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+			<node id="id-bone-3" sid="id-skelbones-2-0" name="Root" type="JOINT">
+				<matrix sid="transform"> 1.0 2.321090504043069e-14 -3.8941436741879443e-07 0.0 -2.321090504043069e-14 -1.0 -1.1920928955078125e-07 1.8333449363708496 -3.8941436741879443e-07 1.1920928955078125e-07 -1.0 -1.0927587368314562e-07 0.0 0.0 0.0 1.0  </matrix>
+				<node id="id-bone-4" sid="id-skelbones-2-1" name="Rear_Gun" type="JOINT">
+					<matrix sid="transform"> 1.0 1.804553041555041e-14 -1.7484558156866115e-07 -7.868769102969964e-07 -3.789621340257593e-14 1.0 -1.1353264994795609e-07 1.4415171146392822 1.7484558156866115e-07 1.1353264994795609e-07 1.0 -1.8676053285598755 0.0 0.0 0.0 1.0  </matrix>
+				</node>
+				<node id="id-bone-5" sid="id-skelbones-2-2" name="Front_Gun" type="JOINT">
+					<matrix sid="transform"> 1.0 3.609106421923261e-14 -4.1326416067022365e-07 -1.453136455609183e-08 -8.30100419825508e-14 1.0 -1.135326641588108e-07 5.596715927124023 4.1326416067022365e-07 1.135326641588108e-07 1.0 -1.5679383277893066 0.0 0.0 0.0 1.0  </matrix>
+				</node>
+			</node>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>

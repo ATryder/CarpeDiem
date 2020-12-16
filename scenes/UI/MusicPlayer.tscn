@@ -1,0 +1,231 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://styles/window/MusicPlayer.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://textures/UI/music player/pause_blue.atlastex" type="Texture" id=2]
+[ext_resource path="res://textures/UI/music player/pause_orange.atlastex" type="Texture" id=3]
+[ext_resource path="res://textures/UI/music player/pause_black.atlastex" type="Texture" id=4]
+[ext_resource path="res://textures/UI/music player/back_orange.atlastex" type="Texture" id=5]
+[ext_resource path="res://textures/UI/music player/back_black.atlastex" type="Texture" id=6]
+[ext_resource path="res://textures/UI/music player/back_blue.atlastex" type="Texture" id=7]
+[ext_resource path="res://textures/UI/music player/stop_orange.atlastex" type="Texture" id=8]
+[ext_resource path="res://textures/UI/music player/stop_blue.atlastex" type="Texture" id=9]
+[ext_resource path="res://textures/UI/music player/stop_black.atlastex" type="Texture" id=10]
+[ext_resource path="res://textures/UI/music player/forward_orange.atlastex" type="Texture" id=11]
+[ext_resource path="res://textures/UI/music player/forward_blue.atlastex" type="Texture" id=12]
+[ext_resource path="res://textures/UI/music player/forward_black.atlastex" type="Texture" id=13]
+[ext_resource path="res://textures/UI/music player/play_orange.atlastex" type="Texture" id=14]
+[ext_resource path="res://textures/UI/music player/play_blue.atlastex" type="Texture" id=15]
+[ext_resource path="res://textures/UI/music player/play_black.atlastex" type="Texture" id=16]
+[ext_resource path="res://fonts/ThreeFourTwoTwo.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://scripts/ui/MusicPlayer.gd" type="Script" id=18]
+
+[sub_resource type="DynamicFont" id=1]
+size = 71
+use_filter = true
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+use_filter = true
+font_data = ExtResource( 17 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[node name="MusicPlayer" type="Panel" groups=[
+"interface_themeable",
+]]
+pause_mode = 2
+margin_right = 392.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 392, 179 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position" type="Label" parent="."]
+margin_left = 152.0
+margin_top = 32.0
+margin_right = 367.0
+margin_bottom = 104.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.882353, 0.658824, 0.0666667, 1 )
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Track" type="Label" parent="."]
+margin_left = 147.0
+margin_top = 90.0
+margin_right = 362.0
+margin_bottom = 123.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.882353, 0.658824, 0.0666667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseButton" type="TextureButton" parent="."]
+margin_left = 48.0
+margin_top = 13.0
+margin_right = 99.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 51, 49 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseHighlight" type="TextureButton" parent="PauseButton"]
+material = SubResource( 3 )
+margin_right = 51.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 51, 49 )
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 4.0
+margin_top = 56.0
+margin_right = 55.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 51, 49 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackHighlight" type="TextureButton" parent="BackButton"]
+material = SubResource( 3 )
+margin_right = 51.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 51, 49 )
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 7 )
+
+[node name="StopButton" type="TextureButton" parent="."]
+margin_left = 48.0
+margin_top = 101.0
+margin_right = 99.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 51, 49 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StopHighlight" type="TextureButton" parent="StopButton"]
+material = SubResource( 3 )
+margin_right = 51.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 51, 49 )
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+
+[node name="ForwardButton" type="TextureButton" parent="."]
+margin_left = 90.0
+margin_top = 56.0
+margin_right = 141.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 51, 49 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ForwardHighlight" type="TextureButton" parent="ForwardButton"]
+material = SubResource( 3 )
+margin_right = 51.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 51, 49 )
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+
+[node name="PlayButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 47.0
+margin_top = 51.0
+margin_right = 102.0
+margin_bottom = 111.0
+rect_min_size = Vector2( 55, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayHighlight" type="TextureButton" parent="PlayButton"]
+material = SubResource( 3 )
+margin_right = 51.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 55, 60 )
+mouse_filter = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
+
+[node name="PlayOn" type="TextureRect" parent="."]
+margin_left = 47.0
+margin_top = 51.0
+margin_right = 102.0
+margin_bottom = 111.0
+rect_min_size = Vector2( 55, 60 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayOnHighlight" type="TextureRect" parent="PlayOn"]
+material = SubResource( 3 )
+margin_right = 55.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 55, 60 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="PauseButton" to="." method="_on_Pause"]
+[connection signal="button_up" from="BackButton" to="." method="_on_Back"]
+[connection signal="button_up" from="StopButton" to="." method="_on_Stop"]
+[connection signal="button_up" from="ForwardButton" to="." method="_on_Forward"]
+[connection signal="button_up" from="PlayButton" to="." method="_on_Play"]

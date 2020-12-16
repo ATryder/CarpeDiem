@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fx/engine/EnginePlume.glb" type="PackedScene" id=1]
+[ext_resource path="res://shaders/unshaded/gradient/Masked_TexAdd.shader" type="Shader" id=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.143345, 0.313993, 0.870307 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.71875, 0.986816, 1, 1, 0.3125, 0.371582, 1, 1, 0, 0.0156863, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 512
+
+[sub_resource type="ShaderMaterial" id=3]
+render_priority = 3
+shader = ExtResource( 2 )
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/alpha_mod = 0.0
+shader_param/alpha = 0.0
+shader_param/tex = SubResource( 2 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "start"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cone:material_override:shader_param/alpha")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "stop"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cone:material_override:shader_param/alpha")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
+[node name="EnginePlume" instance=ExtResource( 1 )]
+
+[node name="Cone" parent="." index="0"]
+material_override = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+autoplay = "start"
+anims/start = SubResource( 4 )
+anims/stop = SubResource( 5 )

@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://shaders/unshaded/gradient/Billboard/Masked_Shockwave.shader" type="Shader" id=1]
+
+[resource]
+
+render_priority = 127
+shader = ExtResource( 1 )
+shader_param/radius = 0.5
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/col1 = Color( 0, 0, 1, 0 )
+shader_param/col2 = Color( 0.470588, 0.727022, 1, 0.569059 )
+shader_param/col3 = Color( 0.470588, 0.941176, 1, 1 )
+shader_param/col4 = Color( 0.890625, 0.987847, 1, 1 )
+shader_param/col5 = Color( 0, 0, 1, 0 )
+shader_param/col6 = Color( 0, 0, 1, 0 )
+shader_param/pos1 = 0.75
+shader_param/pos2 = 0.91
+shader_param/pos3 = 0.92
+shader_param/pos4 = 0.94
+shader_param/pos5 = 0.95
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+_sections_unfolded = [ "shader_param" ]
+

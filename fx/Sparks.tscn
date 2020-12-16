@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://materials/fx/particles/Sparks_Orange.material" type="Material" id=1]
+[ext_resource path="res://scripts/game/fx/particles/Particles_OneShot.gd" type="Script" id=2]
+
+[sub_resource type="QuadMesh" id=1]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.516908, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[node name="Sparks" type="CPUParticles"]
+material_override = ExtResource( 1 )
+emitting = false
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 0.8
+mesh = SubResource( 1 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 18.0
+initial_velocity_random = 0.5
+angular_velocity = 1.0
+scale_amount = 0.1
+scale_amount_random = 0.5
+color_ramp = SubResource( 2 )
+script = ExtResource( 2 )

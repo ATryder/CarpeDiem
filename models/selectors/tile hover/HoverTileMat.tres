@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://models/HexTile/HexTile.shader" type="Shader" id=1]
+
+[resource]
+render_priority = -3
+shader = ExtResource( 1 )
+shader_param/color1 = Color( 1, 0.984314, 0, 0 )
+shader_param/color2 = Color( 1, 0.984375, 0, 1 )
+shader_param/color3 = Color( 1, 0.679688, 0, 1 )
+shader_param/color4 = Color( 1, 0.678431, 0, 0 )
+shader_param/pos1 = 0.1
+shader_param/pos2 = 0.5

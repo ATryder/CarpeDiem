@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://models/units/CommandStation/CommandStation.dae" type="PackedScene" id=1]
+[ext_resource path="res://scripts/game/units/CommandStation.gd" type="Script" id=2]
+[ext_resource path="res://scenes/UI/action buttons/ActionButton_Command_Station.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/game/units/animations/missile_attack.gd" type="Script" id=4]
+[ext_resource path="res://fx/attacks/CommandStation/CommandStation_Attack.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/game/units/animations/destroy_unit_flareblast.gd" type="Script" id=6]
+[ext_resource path="res://fx/unit_expolsion/Exp_Shockwave.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/units/CommandStation/CommandStationMat.tres" type="Material" id=8]
+
+[node name="Command_Station" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+attackRange = 6.0
+visibilityRange = 10.0
+isGhostable = true
+geomPath = NodePath("CommandStation")
+actionButtonScene = ExtResource( 3 )
+max_attacks = 1
+attackAnimation = ExtResource( 4 )
+attackWeaponSpawn = ExtResource( 5 )
+randomWeaponSpawn = true
+numberOfAttackShots = 8
+destroyAnimation = ExtResource( 6 )
+destroyFX = ExtResource( 7 )
+
+[node name="CommandStation" parent="." index="0"]
+material/0 = ExtResource( 8 )

@@ -1,0 +1,30 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://models/props/Star/shaders/Star_High.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+shader_param/frequency = 0.25
+shader_param/offset = Vector3( 0, 0, 0 )
+shader_param/time = 0.0
+shader_param/frequency2 = 1.25
+shader_param/offset2 = Vector3( 0, 0, 0 )
+shader_param/time2 = 0.0
+shader_param/lift = Vector3( 1, 0.873, 0.507 )
+shader_param/gamma = Vector3( 1.584, 0.501, 0 )
+shader_param/gain = Vector3( 1.215, 1.098, 0.694 )
+shader_param/fog = null
+shader_param/col1 = null
+shader_param/col2 = Color( 0.537255, 0.537255, 0.537255, 1 )
+shader_param/col3 = Color( 0.431373, 0.431373, 0.431373, 1 )
+shader_param/col4 = Color( 1, 1, 1, 1 )
+shader_param/pos1 = 0.107
+shader_param/pos2 = 0.156
+shader_param/pos3 = 0.205
+shader_param/pos4 = 0.302
+shader_param/dcol1 = Color( 0.458824, 0.458824, 0.458824, 1 )
+shader_param/dcol2 = Color( 1, 1, 1, 1 )
+shader_param/dpos1 = 0.239
+shader_param/dpos2 = 0.931

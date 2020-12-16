@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_ColumnWipe.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.146789, 0.293578, 0.422018, 0.559633, 0.697248, 0.848624, 1 )
+colors = PoolColorArray( 1, 1, 0.796078, 1, 1, 1, 1, 1, 1, 1, 0.796078, 1, 1, 1, 0.6, 1, 1, 1, 0.301961, 1, 1, 1, 0, 1, 1, 1, 0.301961, 1, 1, 1, 0.6, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 14
+
+[node name="ControlTrans_ColumnWipe" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -984.0
+margin_bottom = -560.0
+mouse_filter = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 1 )
+length = 0.5
+offset = 0.5
+edgeSize = 0.005
+trailingFade = 0.8
+angle = 1.571
+columns = 14
+columnLength = 0.4
+colors = SubResource( 2 )

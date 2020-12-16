@@ -1,0 +1,304 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_ColumnWipe.gd" type="Script" id=1]
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=2]
+[ext_resource path="res://scripts/ui/menus/NewGameMenu.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0, 0, 1, 1, 0, 0.923828, 1, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 24
+
+[node name="NewGameMenu" type="PanelContainer" groups=[
+"interface_themeable",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -77.0
+margin_bottom = -130.0
+rect_min_size = Vector2( 96, 96 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 928.0
+margin_bottom = 448.0
+custom_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 909.0
+margin_bottom = 351.0
+custom_constants/separation = 48
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 415.0
+margin_bottom = 351.0
+custom_constants/vseparation = 24
+custom_constants/hseparation = 24
+columns = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_top = 11.0
+margin_right = 191.0
+margin_bottom = 30.0
+text = "label_map_dimensions"
+
+[node name="map_dimensions" type="OptionButton" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_left = 215.0
+margin_right = 415.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+text = "64 x 32"
+align = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_top = 65.0
+margin_right = 191.0
+margin_bottom = 84.0
+text = "label_players"
+
+[node name="players" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_left = 215.0
+margin_top = 65.0
+margin_right = 415.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+text = "2"
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_top = 119.0
+margin_right = 191.0
+margin_bottom = 138.0
+text = "label_cloud_color"
+
+[node name="cloud_colors" type="OptionButton" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_left = 215.0
+margin_top = 108.0
+margin_right = 415.0
+margin_bottom = 149.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+align = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_top = 179.0
+margin_right = 191.0
+margin_bottom = 198.0
+text = "label_allvis"
+
+[node name="allvis" type="CheckBox" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_left = 215.0
+margin_top = 173.0
+margin_right = 247.0
+margin_bottom = 205.0
+size_flags_horizontal = 0
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_top = 235.0
+margin_right = 191.0
+margin_bottom = 254.0
+text = "label_nofog"
+
+[node name="nofog" type="CheckBox" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_left = 215.0
+margin_top = 229.0
+margin_right = 247.0
+margin_bottom = 261.0
+size_flags_horizontal = 0
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_top = 291.0
+margin_right = 191.0
+margin_bottom = 310.0
+text = "label_alliedai"
+
+[node name="alliedai" type="CheckBox" parent="VBoxContainer/HBoxContainer/GridContainer"]
+margin_left = 215.0
+margin_top = 285.0
+margin_right = 247.0
+margin_bottom = 317.0
+size_flags_horizontal = 0
+
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 463.0
+margin_right = 909.0
+margin_bottom = 351.0
+custom_constants/vseparation = 24
+custom_constants/hseparation = 24
+columns = 2
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_top = 11.0
+margin_right = 222.0
+margin_bottom = 30.0
+text = "label_difficulty"
+
+[node name="difficulty" type="OptionButton" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_left = 246.0
+margin_right = 446.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+align = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_top = 76.0
+margin_right = 222.0
+margin_bottom = 95.0
+text = "label_asteroid_amount"
+
+[node name="asteroid_amount" type="OptionButton" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_left = 246.0
+margin_top = 65.0
+margin_right = 446.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+align = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_top = 141.0
+margin_right = 222.0
+margin_bottom = 160.0
+text = "label_star_amount"
+
+[node name="star_amount" type="OptionButton" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_left = 246.0
+margin_top = 130.0
+margin_right = 446.0
+margin_bottom = 171.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+align = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_top = 206.0
+margin_right = 222.0
+margin_bottom = 225.0
+text = "label_player"
+
+[node name="player" type="OptionButton" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_left = 246.0
+margin_top = 195.0
+margin_right = 446.0
+margin_bottom = 236.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+align = 1
+expand_icon = true
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_top = 268.0
+margin_right = 222.0
+margin_bottom = 287.0
+text = "label_handle"
+
+[node name="playerHandle" type="LineEdit" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_left = 246.0
+margin_top = 260.0
+margin_right = 446.0
+margin_bottom = 295.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+max_length = 10
+clear_button_enabled = true
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="Label8" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_top = 325.0
+margin_right = 222.0
+margin_bottom = 344.0
+text = "label_show_tutorial_short"
+
+[node name="showtutorial" type="CheckBox" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+margin_left = 246.0
+margin_top = 319.0
+margin_right = 278.0
+margin_bottom = 351.0
+size_flags_horizontal = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 383.0
+margin_right = 909.0
+margin_bottom = 424.0
+size_flags_vertical = 0
+custom_constants/separation = 10
+alignment = 2
+
+[node name="help_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 120.0
+margin_bottom = 41.0
+text = "label_help"
+
+[node name="random_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 130.0
+margin_right = 279.0
+margin_bottom = 41.0
+text = "label_random"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 289.0
+margin_right = 627.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+custom_styles/separator = SubResource( 1 )
+
+[node name="start_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 637.0
+margin_right = 761.0
+margin_bottom = 41.0
+text = "label_start"
+
+[node name="cancel_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 771.0
+margin_right = 909.0
+margin_bottom = 41.0
+text = "label_cancel"
+
+[node name="ControlTrans_ColumnWipe" type="TextureRect" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 928.0
+margin_bottom = 448.0
+script = ExtResource( 1 )
+length = 0.5
+playOnStart = true
+offset = 0.5
+edgeSize = 0.1
+trailingFade = 0.7
+angle = 0.785
+octaves = 8
+columns = 24
+columnLength = 0.6
+colors = SubResource( 3 )
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GridContainer/map_dimensions" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/GridContainer/map_dimensions" to="." method="_on_dimension_selected"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GridContainer/cloud_colors" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/GridContainer/cloud_colors" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GridContainer2/difficulty" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/GridContainer2/difficulty" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GridContainer2/asteroid_amount" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/GridContainer2/asteroid_amount" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GridContainer2/star_amount" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/GridContainer2/star_amount" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/GridContainer2/player" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/GridContainer2/player" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/help_button" to="." method="_on_help_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/random_button" to="." method="_randomize"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/start_button" to="." method="_start"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/cancel_button" to="." method="_cancel"]

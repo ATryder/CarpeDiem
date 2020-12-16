@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Notify_Reverb.wav-e8636af5da3ecaab297aba8ff26c66bd.sample"
+
+[deps]
+
+source_file="res://audio/UI/Notify_Reverb.wav"
+dest_files=[ "res://.import/Notify_Reverb.wav-e8636af5da3ecaab297aba8ff26c66bd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=1

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://audio/OneShotAudio.gd" type="Script" id=1]
+[ext_resource path="res://audio/SFX/ElectricalDamage.wav" type="AudioStream" id=2]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D"]
+stream = ExtResource( 2 )
+autoplay = true
+bus = "FX"
+script = ExtResource( 1 )
+volume = 0.268

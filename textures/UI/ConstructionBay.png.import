@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path.s3tc="res://.import/ConstructionBay.png-9dae2d0f8685fcb77232c02262b17ff1.s3tc.stex"
+path.etc2="res://.import/ConstructionBay.png-9dae2d0f8685fcb77232c02262b17ff1.etc2.stex"
+path.etc="res://.import/ConstructionBay.png-9dae2d0f8685fcb77232c02262b17ff1.etc.stex"
+metadata={
+"imported_formats": [ "s3tc", "etc2", "etc" ],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://textures/UI/ConstructionBay.png"
+dest_files=[ "res://.import/ConstructionBay.png-9dae2d0f8685fcb77232c02262b17ff1.s3tc.stex", "res://.import/ConstructionBay.png-9dae2d0f8685fcb77232c02262b17ff1.etc2.stex", "res://.import/ConstructionBay.png-9dae2d0f8685fcb77232c02262b17ff1.etc.stex" ]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=1.0
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=2
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=0
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

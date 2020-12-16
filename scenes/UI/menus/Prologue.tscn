@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://scripts/ui/menus/prologue.gd" type="Script" id=2]
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_CheckerWipe.gd" type="Script" id=3]
+
+[node name="Prologue" type="PanelContainer"]
+margin_right = 664.0
+margin_bottom = 509.0
+rect_min_size = Vector2( 664, 509 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 645.0
+margin_bottom = 487.0
+scroll_horizontal_enabled = false
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+margin_right = 626.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "message_prologue"
+autowrap = true
+
+[node name="ControlTrans_CheckerWipe" type="TextureRect" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 645.0
+margin_bottom = 487.0
+script = ExtResource( 3 )
+length = 0.5
+playOnStart = true
+color = Color( 1, 0, 0, 1 )
+edgeSize = 0.02
+leadingFade = 0.5
+trailingFade = 0.5
+random = false
+grid = Vector2( 12, 12 )
+squareLength = 0.535

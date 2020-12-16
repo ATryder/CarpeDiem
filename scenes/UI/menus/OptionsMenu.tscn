@@ -1,0 +1,489 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://fonts/oxanium_reg_22.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/ui/menus/OptionsMenu.gd" type="Script" id=3]
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_ColumnWipe.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0 )
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 7.0
+content_margin_right = 7.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.275229, 0.518349, 0.801932, 1 )
+colors = PoolColorArray( 0, 1, 0, 1, 0.667969, 1, 0.735413, 1, 0.952362, 1, 0.128906, 1, 0.65625, 1, 0.6586, 1, 0, 1, 0, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+width = 24
+
+[node name="OptionsMenu" type="PanelContainer" groups=[
+"interface_themeable",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -84.0
+margin_bottom = -123.0
+rect_min_size = Vector2( 96, 96 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 921.0
+margin_bottom = 455.0
+custom_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 902.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 384.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 12
+
+[node name="DisplayOptions" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 384.0
+margin_bottom = 218.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 12
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions"]
+margin_top = 12.0
+margin_right = 384.0
+margin_bottom = 218.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 382.0
+margin_bottom = 204.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = -12
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer"]
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 370.0
+margin_bottom = 192.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 148.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 141.0
+margin_bottom = 25.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0.929412, 1, 1 )
+text = "label_display"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 360.0
+margin_bottom = 42.0
+size_flags_vertical = 4
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 15
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 360.0
+margin_bottom = 204.0
+custom_constants/vseparation = 24
+custom_constants/hseparation = 24
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 6.0
+margin_right = 136.0
+margin_bottom = 25.0
+text = "label_fullscreen"
+
+[node name="fullscreen" type="CheckBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 160.0
+margin_right = 192.0
+margin_bottom = 32.0
+size_flags_horizontal = 0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 67.0
+margin_right = 136.0
+margin_bottom = 86.0
+text = "label_resolution"
+
+[node name="Resolution" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 160.0
+margin_top = 56.0
+margin_right = 360.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+text = "1024 x 600"
+align = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 132.0
+margin_right = 136.0
+margin_bottom = 151.0
+text = "label_theme"
+
+[node name="theme" type="OptionButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 160.0
+margin_top = 121.0
+margin_right = 360.0
+margin_bottom = 162.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 3
+align = 1
+
+[node name="AudioOptions" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 230.0
+margin_right = 384.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 12
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions"]
+margin_top = 12.0
+margin_right = 384.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 382.0
+margin_bottom = 114.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = -12
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer"]
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 370.0
+margin_bottom = 102.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 133.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 126.0
+margin_bottom = 25.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.827451, 0, 1, 1 )
+text = "label_audio"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 360.0
+margin_bottom = 42.0
+size_flags_vertical = 0
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 15
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 360.0
+margin_bottom = 114.0
+size_flags_vertical = 0
+custom_constants/vseparation = 24
+custom_constants/hseparation = 24
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 2.0
+margin_right = 118.0
+margin_bottom = 21.0
+text = "label_soundfx"
+
+[node name="SFX_Slider" type="HSlider" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 142.0
+margin_right = 360.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 128, 24 )
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 50.0
+margin_right = 118.0
+margin_bottom = 69.0
+text = "label_music"
+
+[node name="Music_Slider" type="HSlider" parent="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 142.0
+margin_top = 48.0
+margin_right = 360.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 128, 24 )
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 0.8
+
+[node name="PerformanceOptions" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 396.0
+margin_right = 902.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 12
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/PerformanceOptions"]
+margin_top = 12.0
+margin_right = 506.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 504.0
+margin_bottom = 344.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = -12
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer"]
+margin_left = 10.0
+margin_top = -12.0
+margin_right = 492.0
+margin_bottom = 332.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_right = 209.0
+margin_bottom = 27.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 202.0
+margin_bottom = 25.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "label_performance"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 27.0
+margin_right = 482.0
+margin_bottom = 42.0
+size_flags_vertical = 4
+custom_styles/separator = SubResource( 3 )
+custom_constants/separation = 15
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 482.0
+margin_bottom = 213.0
+custom_constants/vseparation = 24
+custom_constants/hseparation = 24
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 11.0
+margin_right = 158.0
+margin_bottom = 30.0
+text = "label_particledetail"
+
+[node name="particle_detail" type="OptionButton" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 182.0
+margin_right = 482.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 3
+text = "label_medium"
+align = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 76.0
+margin_right = 158.0
+margin_bottom = 95.0
+text = "label_starquality"
+
+[node name="star_quality" type="OptionButton" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 182.0
+margin_top = 65.0
+margin_right = 482.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 3
+text = "label_medium"
+align = 1
+
+[node name="cloudQualityLabel" type="Label" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_top = 141.0
+margin_right = 158.0
+margin_bottom = 160.0
+text = "label_cloudquality"
+
+[node name="cloud_quality" type="OptionButton" parent="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+margin_left = 182.0
+margin_top = 130.0
+margin_right = 482.0
+margin_bottom = 171.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 3
+text = "label_simplex_med"
+align = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 390.0
+margin_right = 902.0
+margin_bottom = 431.0
+size_flags_vertical = 0
+custom_constants/separation = 10
+
+[node name="help_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 120.0
+margin_bottom = 41.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "label_help"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 130.0
+margin_right = 639.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+custom_styles/separator = SubResource( 4 )
+custom_constants/separation = 0
+
+[node name="okay_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 649.0
+margin_right = 754.0
+margin_bottom = 41.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "label_ok"
+
+[node name="cancel_button" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 764.0
+margin_right = 902.0
+margin_bottom = 41.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "label_cancel"
+
+[node name="ControlTrans_ColumnWipe" type="TextureRect" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 921.0
+margin_bottom = 455.0
+script = ExtResource( 4 )
+length = 0.5
+playOnStart = true
+offset = 0.5
+edgeSize = 0.1
+trailingFade = 0.7
+angle = 1.57
+octaves = 2
+columns = 24
+columnLength = 0.72
+colors = SubResource( 6 )
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/fullscreen" to="." method="_fullscreen_pressed"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/Resolution" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/Resolution" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/theme" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/VBoxContainer/DisplayOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/theme" to="." method="_click"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VBoxContainer/AudioOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/Music_Slider" to="." method="_on_Music_Slider_value_changed"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/particle_detail" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/particle_detail" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/star_quality" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/star_quality" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/cloud_quality" to="." method="_click"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer/PerformanceOptions/PanelContainer/MarginContainer/VBoxContainer/GridContainer/cloud_quality" to="." method="_click"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/help_button" to="." method="_on_help_button_button_up"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/okay_button" to="." method="_confirm"]
+[connection signal="button_up" from="VBoxContainer/HBoxContainer2/cancel_button" to="." method="_cancel"]

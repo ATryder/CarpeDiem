@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="NightHawk_Attack" type="Spatial"]
+
+[node name="Laser_L" type="Spatial" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.910771, 1.37114, 0.475462 )
+
+[node name="Laser_R" type="Spatial" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.910771, 1.37114, 0.475462 )
+
+

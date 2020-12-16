@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_Blinds.gd" type="Script" id=1]
+
+[node name="ControlTrans_Blinds" type="TextureRect"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+length = 1.0
+color = Color( 0.403922, 0.635294, 1, 1 )
+edgeSize = 0.3
+angle = 3.14
+num_blades = 10
+blade_length = 0.4

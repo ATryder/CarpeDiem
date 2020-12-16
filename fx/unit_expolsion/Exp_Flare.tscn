@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fx/unit_expolsion/Exp_Flare.gd" type="Script" id=1]
+[ext_resource path="res://textures/fx/Flare_Streak.png" type="Texture" id=2]
+[ext_resource path="res://textures/fx/Flare_Glow.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Animation" id=3]
+resource_name = "Flare"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Streak:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 2, 2.3, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.7, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.175006, 0.08 ), Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ), Vector2( 0.5, 0.48 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.48 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.48 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.48 ), Vector2( 0.5, 0.5 ), Vector2( 0.5, 0.48 ), Vector2( 0.55, 0.5 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Glow:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 2.3, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.5, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 0.4, 0.4 ), Vector2( 0.7, 0.7 ), Vector2( 0.48, 0.48 ), Vector2( 0.5, 0.5 ), Vector2( 0.47, 0.47 ), Vector2( 0.55, 0.55 ), Vector2( 0.46, 0.46 ), Vector2( 0.5, 0.5 ), Vector2( 0.48, 0.48 ), Vector2( 0.55, 0.55 ), Vector2( 0.48, 0.48 ), Vector2( 0.65, 0.65 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Glow:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "explode"
+}, {
+"args": [  ],
+"method": "finish_flare"
+} ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Streak" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 2 )
+
+[node name="Glow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 2 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Flare"
+anims/Flare = SubResource( 3 )

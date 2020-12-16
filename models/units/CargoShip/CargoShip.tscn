@@ -1,0 +1,24 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://models/units/CargoShip/CargoShip.dae" type="PackedScene" id=1]
+[ext_resource path="res://scripts/game/units/Unit.gd" type="Script" id=2]
+[ext_resource path="res://scenes/UI/action buttons/ActionButton_Cargo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fx/engine/CargoShip_EngineFX.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/game/units/animations/destroy_unit.gd" type="Script" id=5]
+[ext_resource path="res://fx/unit_expolsion/Exp_Basic.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/units/CargoShip/CargoShipMat.tres" type="Material" id=7]
+
+[node name="CargoShip" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+moveRange = 7.0
+visibilityRange = 5.0
+type = 5
+geomPath = NodePath("CargoShip")
+actionButtonScene = ExtResource( 3 )
+engineFX = ExtResource( 4 )
+max_moves = 1
+destroyAnimation = ExtResource( 5 )
+destroyFX = ExtResource( 6 )
+
+[node name="CargoShip" parent="." index="0"]
+material/0 = ExtResource( 7 )

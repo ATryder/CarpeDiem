@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_ContraBlinds.gd" type="Script" id=1]
+
+[node name="ControlTrans_ContraBlinds" type="TextureRect"]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 429.0
+margin_bottom = 108.0
+script = ExtResource( 1 )
+playOnStart = true
+color = Color( 0, 1, 0, 0.792157 )
+edgeSize = 1.5
+num_blades = 5
+blade_length = 0.5
+color2 = Color( 0.0941176, 0.0941176, 1, 0.792157 )

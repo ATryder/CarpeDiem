@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://fonts/oxanium_med_26_outline.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scripts/ui/control_animators/ControlTrans_ContraBlinds.gd" type="Script" id=3]
+[ext_resource path="res://scripts/ui/dialog/Message_Saving.gd" type="Script" id=4]
+
+[node name="Message_Saving" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -835.0
+margin_bottom = -527.0
+rect_min_size = Vector2( 256, 128 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 19.0
+margin_top = 51.0
+margin_right = 237.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 2 )
+text = "message_saving"
+align = 1
+
+[node name="ControlTrans_ContraBlinds" type="TextureRect" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 237.0
+margin_bottom = 106.0
+script = ExtResource( 3 )
+playOnStart = true
+color = Color( 1, 0, 0, 0.788235 )
+edgeSize = 1.5
+num_blades = 5
+blade_length = 0.5
+color2 = Color( 1, 0, 0.831373, 0.788235 )

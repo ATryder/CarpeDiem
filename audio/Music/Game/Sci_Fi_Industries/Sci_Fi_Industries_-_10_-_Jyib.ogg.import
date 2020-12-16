@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sci_Fi_Industries_-_10_-_Jyib.ogg-9fca6b3c763124c1ba914110020f119f.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Sci_Fi_Industries/Sci_Fi_Industries_-_10_-_Jyib.ogg"
+dest_files=[ "res://.import/Sci_Fi_Industries_-_10_-_Jyib.ogg-9fca6b3c763124c1ba914110020f119f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

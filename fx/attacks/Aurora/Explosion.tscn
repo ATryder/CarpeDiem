@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/game/fx/particles/Particles_OneShot.gd" type="Script" id=1]
+[ext_resource path="res://shaders/unshaded/gradient/Billboard/Masked_TexGrad.shader" type="Shader" id=2]
+[ext_resource path="res://textures/fx/SmokePuff.png" type="Texture" id=3]
+[ext_resource path="res://fx/Debris.tscn" type="PackedScene" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = 127
+shader = ExtResource( 2 )
+shader_param/col1 = Color( 1, 0.969238, 0.507812, 1 )
+shader_param/col2 = Color( 1, 0.718018, 0.179688, 1 )
+shader_param/col3 = Color( 1, 0, 0, 1 )
+shader_param/pos1 = 0.0
+shader_param/pos2 = 0.5
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/tex = ExtResource( 3 )
+
+[sub_resource type="QuadMesh" id=2]
+size = Vector2( 5, 5 )
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="ShaderMaterial" id=4]
+render_priority = 127
+shader = ExtResource( 2 )
+shader_param/col1 = Color( 0.667969, 0.92218, 1, 1 )
+shader_param/col2 = Color( 0.179688, 0.846191, 1, 1 )
+shader_param/col3 = Color( 0, 0.34375, 1, 1 )
+shader_param/pos1 = 0.0
+shader_param/pos2 = 0.5
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/tex = ExtResource( 3 )
+
+[node name="Explosion" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="RedFlames" type="CPUParticles" parent="."]
+material_override = SubResource( 1 )
+emitting = false
+amount = 10
+lifetime = 2.3
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+mesh = SubResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 1.5
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 16.0
+angular_velocity_random = 1.0
+angle = 360.0
+angle_random = 1.0
+scale_amount_random = 1.0
+color_ramp = SubResource( 3 )
+
+[node name="BlueFlames" type="CPUParticles" parent="."]
+material_override = SubResource( 4 )
+emitting = false
+amount = 6
+lifetime = 2.3
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+mesh = SubResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 1.5
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 16.0
+angular_velocity_random = 1.0
+angle = 360.0
+angle_random = 1.0
+scale_amount_random = 1.0
+color_ramp = SubResource( 3 )
+
+[node name="Debris" parent="." instance=ExtResource( 4 )]
+

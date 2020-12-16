@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://scripts/ui/dialog/TutorialDialog.gd" type="Script" id=2]
+[ext_resource path="res://fonts/oxanium_med_26.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/UI/transition/ContraBlinds_BlueGreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://fonts/DefaultFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://audio/UI/ChimeIn.wav" type="AudioStream" id=6]
+
+[node name="TutorialDialog" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -424.0
+margin_bottom = -110.0
+rect_min_size = Vector2( 600, 490 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+introSound = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 19.0
+margin_top = 24.0
+margin_right = 581.0
+margin_bottom = 468.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 24
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+visible = false
+margin_right = 562.0
+margin_bottom = 27.0
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.545098, 1, 0, 1 )
+text = "label_tutorial"
+autowrap = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 562.0
+margin_bottom = 444.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 24
+
+[node name="Message" type="RichTextLabel" parent="VBoxContainer/VBoxContainer"]
+margin_right = 562.0
+margin_bottom = 323.0
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 5 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+
+[node name="show_tutorial" type="CheckBox" parent="VBoxContainer/VBoxContainer"]
+margin_top = 347.0
+margin_right = 562.0
+margin_bottom = 379.0
+pressed = true
+text = "label_show_tutorial"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+margin_left = 417.0
+margin_top = 403.0
+margin_right = 562.0
+margin_bottom = 444.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+custom_constants/separation = 24
+
+[node name="Neutral" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+margin_right = 90.0
+margin_bottom = 41.0
+focus_neighbour_left = NodePath("../HBoxContainer/Negative")
+focus_neighbour_right = NodePath("../HBoxContainer/Positive")
+focus_next = NodePath("../HBoxContainer/Positive")
+focus_previous = NodePath("../HBoxContainer/Negative")
+text = "Option"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 145.0
+margin_bottom = 41.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/separation = 10
+
+[node name="Positive" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+visible = false
+margin_right = 124.0
+margin_bottom = 41.0
+focus_neighbour_left = NodePath("../../Neutral")
+focus_neighbour_right = NodePath("../Negative")
+focus_next = NodePath("../Negative")
+focus_previous = NodePath("../../Neutral")
+text = "label_okay"
+
+[node name="Negative" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+margin_right = 145.0
+margin_bottom = 41.0
+focus_neighbour_left = NodePath("../Positive")
+focus_neighbour_right = NodePath("../../Neutral")
+focus_next = NodePath("../../Neutral")
+focus_previous = NodePath("../Positive")
+text = "label_dismiss"
+
+[node name="ControlTrans_ContraBlinds" parent="." instance=ExtResource( 4 )]
+margin_right = 581.0
+margin_bottom = 468.0
+color = Color( 0, 0, 1, 0.792157 )
+angle = 0.785
+num_blades = 10
+color2 = Color( 1, 0.537255, 0, 0.792157 )
+[connection signal="toggled" from="VBoxContainer/VBoxContainer/show_tutorial" to="." method="_on_show_tutorial_toggled"]
+[connection signal="button_up" from="VBoxContainer/VBoxContainer/HBoxContainer/Neutral" to="." method="_on_Neutral_button_up"]
+[connection signal="button_up" from="VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/Positive" to="." method="_on_Positive_button_up"]
+[connection signal="button_up" from="VBoxContainer/VBoxContainer/HBoxContainer/HBoxContainer/Negative" to="." method="_on_Negative_button_up"]

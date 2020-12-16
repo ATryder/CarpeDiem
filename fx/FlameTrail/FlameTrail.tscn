@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://shaders/unshaded/gradient/Masked_TexGrad.shader" type="Shader" id=1]
+[ext_resource path="res://textures/fx/SmokePuff.png" type="Texture" id=2]
+[ext_resource path="res://fx/FlameTrail/FlameTrail.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = 127
+shader = ExtResource( 1 )
+shader_param/col1 = Color( 1, 0.997803, 0.859375, 1 )
+shader_param/col2 = Color( 1, 0.818359, 0.273438, 1 )
+shader_param/col3 = Color( 1, 0, 0, 1 )
+shader_param/pos1 = 0.2
+shader_param/pos2 = 0.5
+shader_param/mask_scale = null
+shader_param/mask_offset = null
+shader_param/tex = ExtResource( 2 )
+
+[node name="FlameTrail" type="MeshInstance"]
+material_override = SubResource( 1 )
+script = ExtResource( 3 )

@@ -1,0 +1,48 @@
+[gd_scene format=2]
+
+[node name="Thananos_Attack" type="Spatial"]
+
+transform = Transform( 1, 0, 0, 0, 0.609585, 0.79272, 0, -0.79272, 0.609585, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Barrel_01" type="Spatial" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00566, 6.43589 )
+
+[node name="Barrel_02" type="Spatial" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.700899, 0.685161, 6.43589 )
+
+[node name="Barrel_03" type="Spatial" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.712706, -0.0240875, 6.43589 )
+
+[node name="Barrel_04" type="Spatial" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.721581, -0.7123, 6.43589 )
+
+[node name="Barrel_05" type="Spatial" parent="." index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000172138, -1.05379, 6.43589 )
+
+[node name="Barrel_06" type="Spatial" parent="." index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.718796, -0.680613, 6.43589 )
+
+[node name="Barrel_07" type="Spatial" parent="." index="6"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.719379, -0.0351134, 6.43589 )
+
+[node name="Barrel_08" type="Spatial" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72008, 0.68316, 6.43589 )
+
+[node name="Barrel_09" type="Spatial" parent="." index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0101059, 0.356952, 6.43589 )
+
+[node name="Barrel_10" type="Spatial" parent="." index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0101059, -0.340227, 6.43589 )
+
+

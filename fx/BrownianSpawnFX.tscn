@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://shaders/unshaded/gradient/Masked_CircleGrad.shader" type="Shader" id=1]
+[ext_resource path="res://scripts/game/fx/particles/BrownianSpawnFX.gd" type="Script" id=2]
+[ext_resource path="res://audio/SFX/clonk.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = 127
+shader = ExtResource( 1 )
+shader_param/radius = 0.5
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/col1 = Color( 0.839844, 1, 0.988739, 1 )
+shader_param/col2 = Color( 0.574219, 0.960083, 1, 1 )
+shader_param/col3 = Color( 0, 0, 1, 0 )
+shader_param/pos1 = 0.025
+shader_param/pos2 = 0.5
+shader_param/mask_offset = null
+shader_param/mask_scale = null
+
+[node name="BrownianSpawnFX" type="MeshInstance"]
+material_override = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer3D" parent="." instance=ExtResource( 3 )]

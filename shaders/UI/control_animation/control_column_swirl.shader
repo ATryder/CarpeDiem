@@ -1,0 +1,67 @@
+shader_type canvas_item;
+render_mode blend_mix,unshaded;
+
+uniform sampler2D TEXTURE2 : hint_black;
+uniform bool reverse = false;
+
+uniform vec4 color : hint_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform sampler2D colors : hint_black;
+uniform sampler2D noise : hint_white;
+
+uniform float offset : hint_range(0.0, 1.0) = 0.0;
+uniform float colorScale = 1;
+uniform float colorSize = 0.0;
+uniform float leadingFade = 0.0;
+uniform float trailingFade = 0.0;
+uniform float columnLength = 0.6;
+uniform float swirlAmount = 3.0;
+uniform float perc = 0.0;
+
+uniform float angle = 0.0;
+
+varying vec2 suv;
+varying float uvRange;
+
+void vertex() {
+	float offsetMag = abs(offset);
+	uvRange = mix(offsetMag, 1.0 - offsetMag, step(offsetMag, 0.5));
+	
+	vec2 uv = vec2(UV.x - 0.5, UV.y - 0.5);
+	float s = sin(angle);
+    float c = cos(angle);
+    uv = vec2((c * uv.x) - (s * uv.y), (s * uv.x) + (c * uv.y));
+    uv += vec2(0.5, 0.5 - offset);
+	suv = uv;
+}
+
+void fragment() {
+	float ang = swirlAmount * distance(suv, vec2(0.5, 0.5));
+	vec2 uv = suv - vec2(0.5, 0.5);
+	float s = sin(ang);
+    float c = cos(ang);
+    uv = vec2((c * uv.x) - (s * uv.y), (s * uv.x) + (c * uv.y));
+    uv += vec2(0.5, 0.5);
+	
+	float rev = float(reverse);
+	vec4 t = texture(TEXTURE, UV);
+	vec4 t2 = texture (TEXTURE2, UV);
+	vec4 tex = mix(t, t2, rev);
+	vec4 tex2 = mix(t2, t, rev);
+	vec4 colorTex = texture(colors, uv * colorScale) * color;
+	vec4 edgeCol = mix(tex, vec4(colorTex.rgb, colorTex.a * step(0.001, min(tex.a + tex2.a, 1.0))), colorTex.a);
+	float track = abs(uv.y / uvRange) * columnLength;
+	track = texture(noise, uv).a * (1.0 - columnLength) + track;
+	
+	float p = perc * (1.0 + leadingFade + colorSize + trailingFade);
+	float pos = p - track;
+	float lFade = max(leadingFade, 0.0001);
+	vec4 col = mix(tex2, edgeCol, clamp(pos, 0.0, lFade) / lFade);
+	float tFade = max(trailingFade, 0.0001);
+	col = mix(col, tex, clamp(pos - leadingFade - colorSize, 0.0, tFade) / tFade);
+	
+	if (col.a < 0.001) {
+		discard;
+	} else {
+		COLOR = col;
+	}
+}

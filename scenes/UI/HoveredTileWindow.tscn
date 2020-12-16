@@ -1,0 +1,365 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://styles/window/window_blue.stylebox" type="StyleBox" id=1]
+[ext_resource path="res://default_theme.theme" type="Theme" id=2]
+[ext_resource path="res://textures/UI/indicators/tile_attributes/indicator_shield.atlastex" type="Texture" id=3]
+[ext_resource path="res://textures/UI/buttons/frame/framebutton_blue.atlastex" type="Texture" id=4]
+[ext_resource path="res://textures/UI/frame_green48.atlastex" type="Texture" id=5]
+[ext_resource path="res://textures/UI/frame_purple48.atlastex" type="Texture" id=6]
+[ext_resource path="res://textures/UI/frame_orange48.atlastex" type="Texture" id=7]
+[ext_resource path="res://fonts/Oxanium-Medium.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://textures/UI/indicators/tile_attributes/indicator_arrow.atlastex" type="Texture" id=9]
+[ext_resource path="res://scripts/game/UI/TileDetails.gd" type="Script" id=10]
+[ext_resource path="res://fonts/oxanium_reg_20.tres" type="DynamicFont" id=11]
+[ext_resource path="res://textures/UI/buttons/frame/framebutton_gray.atlastex" type="Texture" id=12]
+[ext_resource path="res://textures/UI/tile icons/tile_icon_dustcloud.atlastex" type="Texture" id=13]
+[ext_resource path="res://textures/UI/indicators/tile_attributes/indicator_star.atlastex" type="Texture" id=14]
+[ext_resource path="res://textures/UI/indicators/tile_attributes/indicator_crosshair.atlastex" type="Texture" id=15]
+[ext_resource path="res://textures/UI/indicators/tile_attributes/indicator_clouds.atlastex" type="Texture" id=16]
+[ext_resource path="res://textures/UI/indicators/tile_attributes/indicator_asteroids.atlastex" type="Texture" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+outline_size = 2
+use_filter = true
+font_data = ExtResource( 8 )
+
+[node name="HoveredTileWindow" type="PanelContainer" groups=[
+"interface_themeable",
+]]
+margin_right = 298.0
+margin_bottom = 241.0
+rect_min_size = Vector2( 298, 241 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource( 2 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundMargin" type="MarginContainer" parent="."]
+margin_right = 298.0
+margin_bottom = 241.0
+mouse_filter = 2
+custom_constants/margin_right = 59
+custom_constants/margin_top = 57
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="Background" type="Panel" parent="BackgroundMargin"]
+margin_top = 57.0
+margin_right = 239.0
+margin_bottom = 241.0
+mouse_filter = 2
+custom_styles/panel = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 298.0
+margin_bottom = 241.0
+mouse_filter = 2
+custom_constants/margin_right = 20
+custom_constants/margin_top = 24
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 21
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_left = 20.0
+margin_top = 24.0
+margin_right = 278.0
+margin_bottom = 220.0
+mouse_filter = 2
+custom_constants/separation = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_top = 12.0
+margin_right = 160.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 128, 0 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_constants/separation = 12
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 160.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+mouse_filter = 2
+custom_styles/separator = SubResource( 2 )
+
+[node name="PlayerHandle" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 160.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 32 )
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 1, 1 )
+text = "Player 1"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="Defense" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 160.0
+margin_bottom = 128.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 4
+
+[node name="DefenseIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Defense"]
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 3 )
+
+[node name="DefenseIndicator" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer/Defense"]
+margin_left = 36.0
+margin_top = 6.0
+margin_right = 160.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 0, 20 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 0.6
+step = 0.0
+percent_visible = false
+
+[node name="Speed" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+margin_top = 140.0
+margin_right = 142.0
+margin_bottom = 172.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SpeedIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Speed"]
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 9 )
+
+[node name="SpeedIndicator" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer/Speed"]
+margin_left = 36.0
+margin_top = 6.0
+margin_right = 142.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 0, 20 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 1.0
+max_value = 2.0
+step = 0.0
+value = 1.0
+percent_visible = false
+
+[node name="Attributes" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 140.0
+margin_right = 160.0
+margin_bottom = 172.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+
+[node name="Icon_Star" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Attributes"]
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon_Asteroid" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Attributes"]
+margin_left = 32.0
+margin_right = 64.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon_Cloud" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Attributes"]
+margin_left = 64.0
+margin_right = 96.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon_Move" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Attributes"]
+margin_left = 96.0
+margin_right = 128.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 9 )
+
+[node name="Icon_Attack" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Attributes"]
+margin_left = 128.0
+margin_right = 160.0
+margin_bottom = 32.0
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource( 15 )
+
+[node name="TileIconContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 162.0
+margin_right = 258.0
+margin_bottom = 196.0
+mouse_filter = 2
+
+[node name="TileIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer"]
+margin_right = 96.0
+margin_bottom = 96.0
+mouse_filter = 0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource( 12 )
+
+[node name="EnvIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer/TileIcon"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 96, 96 )
+mouse_filter = 2
+texture = ExtResource( 13 )
+flip_h = true
+
+[node name="UnitIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer/TileIcon"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 96, 96 )
+mouse_filter = 2
+flip_h = true
+
+[node name="Strength" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer/TileIcon"]
+margin_left = 58.0
+margin_top = -6.0
+margin_right = 106.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 48, 48 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="StrengthIndicator" type="Label" parent="MarginContainer/HBoxContainer/TileIconContainer/TileIcon/Strength"]
+margin_top = 1.0
+margin_right = 48.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 11 )
+text = "10"
+align = 1
+valign = 1
+clip_text = true
+max_lines_visible = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MPA" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer/TileIcon"]
+margin_left = 58.0
+margin_top = 58.0
+margin_right = 106.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 48, 48 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="MPAIndicator" type="Label" parent="MarginContainer/HBoxContainer/TileIconContainer/TileIcon/MPA"]
+margin_top = 1.0
+margin_right = 48.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 11 )
+text = "10"
+align = 1
+valign = 1
+clip_text = true
+max_lines_visible = 1
+
+[node name="BuildIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer"]
+margin_top = 100.0
+margin_right = 96.0
+margin_bottom = 196.0
+mouse_filter = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource( 4 )
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer/BuildIcon"]
+visible = false
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+mouse_filter = 2
+flip_h = true
+
+[node name="Build" type="TextureRect" parent="MarginContainer/HBoxContainer/TileIconContainer/BuildIcon"]
+margin_left = 58.0
+margin_top = 58.0
+margin_right = 106.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 48, 48 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 7 )
+expand = true
+
+[node name="BuildIndicator" type="Label" parent="MarginContainer/HBoxContainer/TileIconContainer/BuildIcon/Build"]
+margin_top = 1.0
+margin_right = 48.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 11 )
+text = "0"
+align = 1
+valign = 1
+clip_text = true
+max_lines_visible = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="MarginContainer/HBoxContainer/TileIconContainer/TileIcon" to="." method="_zoom_to_selection"]

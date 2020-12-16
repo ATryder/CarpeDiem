@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Attack_Range.png-f22cf03cf46b04bccf71725d199d294f.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://scenes/UI/Tutorial/textures/Attack_Range.png"
+dest_files=[ "res://.import/Attack_Range.png-f22cf03cf46b04bccf71725d199d294f.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=2
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=0
+process/fix_alpha_border=false
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

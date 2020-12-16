@@ -1,0 +1,295 @@
+[gd_scene format=2]
+
+[node name="CommandStation_Attack" type="Spatial"]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+
+[node name="Barrel_01" type="Spatial" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25449, 1.02064, 0.56247 )
+
+[node name="Barrel_02" type="Spatial" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.17336, 1.21136, 0.56247 )
+
+[node name="Barrel_03" type="Spatial" parent="." index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07992, 1.44259, 0.56247 )
+
+[node name="Barrel_04" type="Spatial" parent="." index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.07495, 0.894134, 0.56247 )
+
+[node name="Barrel_05" type="Spatial" parent="." index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99346, 1.04486, 0.56247 )
+
+[node name="Barrel_06" type="Spatial" parent="." index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90682, 1.22438, 0.56247 )
+
+[node name="Barrel_07" type="Spatial" parent="." index="6"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.89763, 0.776945, 0.56247 )
+
+[node name="Barrel_08" type="Spatial" parent="." index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.81181, 0.881296, 0.56247 )
+
+[node name="Barrel_09" type="Spatial" parent="." index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.72488, 1.00092, 0.56247 )
+
+[node name="Barrel_10" type="Spatial" parent="." index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9198, 1.85325, 0.56247 )
+
+[node name="Barrel_11" type="Spatial" parent="." index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.80795, 2.0417, 0.56247 )
+
+[node name="Barrel_12" type="Spatial" parent="." index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65452, 2.25325, 0.56247 )
+
+[node name="Barrel_13" type="Spatial" parent="." index="12"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77329, 1.67073, 0.56247 )
+
+[node name="Barrel_14" type="Spatial" parent="." index="13"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.65012, 1.82458, 0.56247 )
+
+[node name="Barrel_15" type="Spatial" parent="." index="14"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51057, 1.99261, 0.56247 )
+
+[node name="Barrel_16" type="Spatial" parent="." index="15"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62025, 1.47238, 0.56247 )
+
+[node name="Barrel_17" type="Spatial" parent="." index="16"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.49579, 1.60158, 0.56247 )
+
+[node name="Barrel_18" type="Spatial" parent="." index="17"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37197, 1.74311, 0.56247 )
+
+[node name="Barrel_19" type="Spatial" parent="." index="18"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.48019, 1.28572, 0.56247 )
+
+[node name="Barrel_20" type="Spatial" parent="." index="19"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35563, 1.39496, 0.56247 )
+
+[node name="Barrel_21" type="Spatial" parent="." index="20"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22223, 1.49895, 0.56247 )
+
+[node name="Barrel_22" type="Spatial" parent="." index="21"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38444, 2.63448, 0.56247 )
+
+[node name="Barrel_23" type="Spatial" parent="." index="22"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22438, 2.81024, 0.56247 )
+
+[node name="Barrel_24" type="Spatial" parent="." index="23"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03791, 2.99023, 0.56247 )
+
+[node name="Barrel_25" type="Spatial" parent="." index="24"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2648, 2.42012, 0.56247 )
+
+[node name="Barrel_26" type="Spatial" parent="." index="25"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.10519, 2.56828, 0.56247 )
+
+[node name="Barrel_27" type="Spatial" parent="." index="26"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92332, 2.72711, 0.56247 )
+
+[node name="Barrel_28" type="Spatial" parent="." index="27"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13393, 2.19113, 0.56247 )
+
+[node name="Barrel_29" type="Spatial" parent="." index="28"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99124, 2.31748, 0.56247 )
+
+[node name="Barrel_30" type="Spatial" parent="." index="29"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.81516, 2.45985, 0.56247 )
+
+[node name="Barrel_31" type="Spatial" parent="." index="30"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01897, 1.97558, 0.56247 )
+
+[node name="Barrel_32" type="Spatial" parent="." index="31"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86147, 2.07322, 0.56247 )
+
+[node name="Barrel_33" type="Spatial" parent="." index="32"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69468, 2.19323, 0.56247 )
+
+[node name="Barrel_34" type="Spatial" parent="." index="33"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89454, 1.74245, 0.56247 )
+
+[node name="Barrel_35" type="Spatial" parent="." index="34"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73934, 1.82952, 0.56247 )
+
+[node name="Barrel_36" type="Spatial" parent="." index="35"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58478, 1.92891, 0.56247 )
+
+[node name="Barrel_37" type="Spatial" parent="." index="36"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03336, 2.99519, 0.56247 )
+
+[node name="Barrel_38" type="Spatial" parent="." index="37"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21326, 2.82868, 0.56247 )
+
+[node name="Barrel_39" type="Spatial" parent="." index="38"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37384, 2.64975, 0.56247 )
+
+[node name="Barrel_40" type="Spatial" parent="." index="39"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.26338, 2.41668, 0.56247 )
+
+[node name="Barrel_41" type="Spatial" parent="." index="40"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.10234, 2.56801, 0.56247 )
+
+[node name="Barrel_42" type="Spatial" parent="." index="41"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92244, 2.73451, 0.56247 )
+
+[node name="Barrel_43" type="Spatial" parent="." index="42"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81033, 2.47853, 0.56247 )
+
+[node name="Barrel_44" type="Spatial" parent="." index="43"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97431, 2.32545, 0.56247 )
+
+[node name="Barrel_45" type="Spatial" parent="." index="44"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14528, 2.18416, 0.56247 )
+
+[node name="Barrel_46" type="Spatial" parent="." index="45"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.03003, 1.96985, 0.56247 )
+
+[node name="Barrel_47" type="Spatial" parent="." index="46"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.86449, 2.08005, 0.56247 )
+
+[node name="Barrel_48" type="Spatial" parent="." index="47"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.69361, 2.20138, 0.56247 )
+
+[node name="Barrel_49" type="Spatial" parent="." index="48"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.578, 1.93951, 0.56247 )
+
+[node name="Barrel_50" type="Spatial" parent="." index="49"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.73885, 1.82811, 0.56247 )
+
+[node name="Barrel_51" type="Spatial" parent="." index="50"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89785, 1.73374, 0.56247 )
+
+[node name="Barrel_52" type="Spatial" parent="." index="51"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64828, 2.24, 0.56247 )
+
+[node name="Barrel_53" type="Spatial" parent="." index="52"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79893, 2.05104, 0.56247 )
+
+[node name="Barrel_54" type="Spatial" parent="." index="53"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92317, 1.85784, 0.56247 )
+
+[node name="Barrel_55" type="Spatial" parent="." index="54"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78077, 1.67159, 0.56247 )
+
+[node name="Barrel_56" type="Spatial" parent="." index="55"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65377, 1.82661, 0.56247 )
+
+[node name="Barrel_57" type="Spatial" parent="." index="56"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.51435, 2.00094, 0.56247 )
+
+[node name="Barrel_58" type="Spatial" parent="." index="57"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37399, 1.75774, 0.56247 )
+
+[node name="Barrel_59" type="Spatial" parent="." index="58"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49565, 1.61386, 0.56247 )
+
+[node name="Barrel_60" type="Spatial" parent="." index="59"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.62724, 1.48001, 0.56247 )
+
+[node name="Barrel_61" type="Spatial" parent="." index="60"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48724, 1.28438, 0.56247 )
+
+[node name="Barrel_62" type="Spatial" parent="." index="61"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35988, 1.39182, 0.56247 )
+
+[node name="Barrel_63" type="Spatial" parent="." index="62"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22019, 1.49862, 0.56247 )
+
+[node name="Barrel_64" type="Spatial" parent="." index="63"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07311, 1.44632, 0.56247 )
+
+[node name="Barrel_65" type="Spatial" parent="." index="64"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.17399, 1.22717, 0.56247 )
+
+[node name="Barrel_66" type="Spatial" parent="." index="65"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25011, 1.0267, 0.56247 )
+
+[node name="Barrel_67" type="Spatial" parent="." index="66"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07808, 0.897859, 0.56247 )
+
+[node name="Barrel_68" type="Spatial" parent="." index="67"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99221, 1.04837, 0.56247 )
+
+[node name="Barrel_69" type="Spatial" parent="." index="68"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.91149, 1.22768, 0.56247 )
+
+[node name="Barrel_70" type="Spatial" parent="." index="69"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.73635, 1.01309, 0.56247 )
+
+[node name="Barrel_71" type="Spatial" parent="." index="70"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.81209, 0.892479, 0.56247 )
+
+[node name="Barrel_72" type="Spatial" parent="." index="71"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.89841, 0.769571, 0.56247 )
+
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Herr_Doktor_-_07_-_Neon_Riding.ogg-44bf415552b44107f955c302011d4271.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Herr_Doktor/Herr_Doktor_-_07_-_Neon_Riding.ogg"
+dest_files=[ "res://.import/Herr_Doktor_-_07_-_Neon_Riding.ogg-44bf415552b44107f955c302011d4271.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

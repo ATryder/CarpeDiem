@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fx/Heal_Sphere/heal_sphere.gd" type="Script" id=1]
+[ext_resource path="res://shaders/unshaded/fx/Masked_TextureDistort.tres" type="Material" id=2]
+[ext_resource path="res://fx/Heal_Sphere/heal_sphere.dae" type="PackedScene" id=3]
+[ext_resource path="res://audio/SFX/repair.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Swoosh"
+length = 1.6
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Heal_Sphere:material/0:shader_param/texOffset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -0.9, -0.25, 0, 0.25, 0, 1.25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_finish"
+} ]
+}
+
+[node name="heal_sphere" instance=ExtResource( 3 )]
+script = ExtResource( 1 )
+
+[node name="Heal_Sphere" parent="." index="0"]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0 )
+cast_shadow = 0
+material/0 = ExtResource( 2 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Swoosh"
+anims/Swoosh = SubResource( 1 )
+
+[node name="AudioStreamPlayer3D" parent="." index="2" instance=ExtResource( 4 )]

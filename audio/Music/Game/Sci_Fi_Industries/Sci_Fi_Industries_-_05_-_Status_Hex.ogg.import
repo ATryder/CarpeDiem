@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sci_Fi_Industries_-_05_-_Status_Hex.ogg-4ef0b0b0f399df8a748adb713b797d3f.oggstr"
+
+[deps]
+
+source_file="res://audio/Music/Game/Sci_Fi_Industries/Sci_Fi_Industries_-_05_-_Status_Hex.ogg"
+dest_files=[ "res://.import/Sci_Fi_Industries_-_05_-_Status_Hex.ogg-4ef0b0b0f399df8a748adb713b797d3f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,322 @@
+id;en
+app_title;Carpe Diem
+unit_name_cargoship;Cargo Ship
+unit_name_nighthawk;Nighthawk
+unit_name_gaumond;B-27 Gaumond
+unit_name_thananos;Thananos
+unit_name_aurora;Aurora Class Battleship
+unit_name_commandstation;Command Station
+unit_name_mpa;Multi-Purpose Assembly
+unit_description_cargoship;Cargo Ships can construct new Command Stations when loaded with %d Multi-Purpose Assemblies as well as transport Multi-Purpose Assemblies from Command Stations to combat units in the field. Cargo Ships have no offensive capabilities and receive no defensive bonuses leaving them extremely vulnerable to attack.
+unit_description_nighthawk;No invasion fleet is safe without a few Nighthawks to keep enemy Gaumond from laying waste to the heavy hitters. The cheap cost and long range of the Nighthawk renders them ideal for scouting out new areas and hunting down enemy cargo ships.
+unit_description_gaumond;The B-27 Gaumond is equipped with a powerful particle accelerator which smashes sub-atomic particles together near the speed of light creating small short lived black holes. Slow recharging of the particle accelerator prevents the Gaumond from being effective against smaller agile craft, but the short distance powerful gravitational force is excellent at dealing damage to slow lumbering craft such as Thananos and Aurora. With an arsenal of electronic countermeasures the Gaumond is nearly invisible to automatic targeting mechanisms such as can be found in missiles, but they are highly vulnerable to the keen eye of Nighthawk pilots. 
+unit_description_thananos;The guided missile barrage of Thananos strikes fear in the hearts of even the most decorated Nighthawk pilots.  Stationed within your territory Thananos can provide an effective shield for your Gaumond against Nighthawk seeking to carve a path for heavier invasion craft. With an excellent sensor range the Thananos can extend your view of the battlefield making it well suited as an early warning system.
+unit_description_aurora;"Armed with powerful cannons designed specifically for taking out stationary targets the Aurora is a worthy flagship of any invasion fleet. Lined with automatically targeting laser batteries the Aurora is well defended from Nighthawk attack, however; these defenses are easily defeated by the electronic countermeasures of B-27 Gaumond. Shield your Battleships with Nighthawks to keep the Gaumond at bay."
+unit_description_mpa;Load %d Multi-Purpose Assemblies onto a cargo ship to construct a new command station or install them on damaged craft to repair %d hull points.
+message_station_in_territory;You cannot build a Command Station within the boundaries of an empire.
+message_insufficient_mpa;You must have %d Multi-Purpose Assemblies to perform this action.
+message_insufficient_station_resources;Command Stations must have access to at least %d star(s) and %d asteroid(s).
+message_delete_unit;Are you sure you’d like to delete this unit?
+message_mpa_enemy_unit;You can only load multi-purpose assemblies onto your own units.
+message_mpa_full;This unit is at full capacity and strength.
+message_mpa_strength_cargo;Would you like to add cargo or strength to this unit?
+message_mpa_full_strength;This unit is not in need of repair.
+message_title_mpa_delivery;MPA Delivery
+message_display_change;Do you wish to keep the new display settings?
+message_quit;Are you sure you’d like to exit Carpe Diem?
+message_saving;Saving…
+message_return_mainmenu;Are you sure you’d like to quit the current game and return to the main menu?
+message_delete_file;Are you sure you’d like to delete %s?
+message_overwrite;Would you like to overwrite the existing file %s?
+error_originating_unit;Unable to determine originating unit.
+error_save_invalidchar;"The filename must not contain any of the following characters: / \\ * ? : | \"" < > %"
+error_save_noname;The filename must be at least one character in length.
+error_dir_noopen;Unable to open the directory %s. Error code: %d
+error_file_not_found;File not found: %s
+error_file_noread;The file %s could not be loaded. Error code: %d
+error_save;Unable to save %s. Error code: %d
+label_error;Error
+label_yes;Yes
+label_no;No
+label_ok;Okay
+label_cancel;Cancel
+label_dismiss;Dismiss
+label_strength;Strength
+label_cargo;Cargo
+label_new;New
+label_random;Random
+label_tutorial;Tutorial
+label_start;Start
+label_resume;Resume
+label_save_load;Save/Load
+label_save;Save
+label_load;Load
+label_options;Options
+label_mainmenu;Main Menu
+label_credits;Credits
+label_prologue;Prologue
+label_history;History
+label_quit;Quit
+label_help;Help
+label_audio;Audio
+label_video;Video
+label_display;Display
+label_theme;Theme
+label_light;Light
+label_dark;Dark
+label_fullscreen;Full Screen
+label_resolution;Resolution
+label_performance;Performance
+label_particledetail;Particle Detail
+label_starquality;Star Quality
+label_cloudquality;Cloud Quality
+label_soundfx;Sound FX
+label_music;Music
+label_low;Low
+label_med;Medium
+label_high;High
+label_xhigh;Extra High
+label_filename;Filename
+label_date;Date
+label_time;Time
+label_players;Players
+label_player;Player
+label_size;Size
+label_ore;Ore
+label_energy;Energy
+label_turn;Turn
+label_load;Load
+label_delete;Delete
+label_formatted_date;%d/%d/%d
+label_overwrite;Overwrite
+label_player_handle;Player %d
+label_bot_handle;Bot %d.%d
+label_map_dimensions;Map Dimensions
+label_cloud_color;Cloud Color
+label_allvis;Visible Map
+label_nofog;Fog of War
+label_alliedai;Allied AI
+label_difficulty;Difficulty
+label_asteroid_amount;Asteroid Frequency
+label_star_amount;Star Frequency
+label_handle;Player Name
+label_instant_arena;Instantiating Arena
+label_create_players;Creating Players
+label_reading_save;Reading Saved Game
+label_gen_dust;Generating Dust Cloud
+label_gen_hex;Generating Hexagon Grid
+label_place_start;Placing Start Positions
+label_gen_stars;Generating Stars
+label_pop_stars;Populating Stars
+label_gen_ast;Generating Asteroids
+label_pop_ast;Populating Asteroids
+label_pop_unit;Populating Units
+label_init_ai;Initializing AI
+label_fin;Finished
+label_pop_ghost;Populating Ghost Units
+label_ships;Ships
+label_stations;Stations
+label_replay;Replay
+label_viewmap;View Map
+label_play;Play
+label_easy;Easy
+label_challenging;Challenging
+label_hard;Hard
+label_welcome;Welcome
+label_combat_units;Combat Units
+label_cargoships;Cargo Ships
+label_command_stations;Command Stations
+label_opposing_units;Opposing Units
+label_hud;Heads Up Display
+label_moving_units;Moving Units
+label_attacking_units;Attacking Units
+label_mpa_transferring;Transferring Multi-Purpose Assemblies
+label_build_window;The Build Window
+label_show_tutorial;Show Tutorial Messages
+label_show_tutorial_short;Show Tutorial
+label_create_game;Creating a New Game
+help_new_game;"[b][color=#80e3ff]Map Dimensions[/color][/b]
+[color=#80e3ff]    Small:[/color] Create a 2 player map with 32x16 tiles.
+[color=#80e3ff]    Medium:[/color] Create a 3 player map with 32x32 tiles.
+[color=#80e3ff]    Large:[/color] Create a 5 player map with 64x32 tiles.
+[color=#80e3ff]    Extra Large:[/color] Create a 7 player map with 64x64 tiles
+
+[b][color=#80e3ff]Cloud Color[/color][/b]
+    The map’s dust cloud will be displayed in the color combination selected here.
+
+[b][color=#80e3ff]Visible Map[/color][/b]
+    If selected the full map terrain will be visible from the start of the game.
+
+[b][color=#80e3ff]Fog of War[/color][/b]
+    If selected areas of the map that have been revealed, but are not immediately visible to your units will be shrouded.
+
+[b][color=#80e3ff]Allied AI[/color][/b]
+    If selected on games with more than 2 players the AI players will be arranged into one or two teams of allied players. On [color=#80e3ff]Easy[/color] and [color=#80e3ff]Challenging[/color] difficulty AI players are allied into one team on 3 player maps and two teams on 5 and 7 player maps. On [color=#80e3ff]Hard[/color] difficulty AI players are always organized into one team of allied players.
+
+[b][color=#80e3ff]Difficullty[/color][/b]
+    Difficulty effects player starting positions relative to resources on the map.
+
+    [color=#80e3ff]Easy:[/color] All players are placed on the map at random locations regardless of available resources.
+
+    [color=#80e3ff]Challenging:[/color] Players start the game on a resource rich location. Most of the AI players are granted starting positions with more available resources than the player, but no player starts the game on the richest locale.
+
+    [color=#80e3ff]Hard:[/color] All AI players start the game on resource rich positions while the player is granted a starting position randomly selected from the remaining map regardless of resource availability. Exception when [color=#80e3ff]Allied AI[/color] is selected, the player is given random selection of the most resource rich locales while AI players are granted starting positions randomly selected from the remaining map regardless of resource availability.
+
+[b][color=#80e3ff]Asteroid Amount[/color][/b]
+    Governs the number of asteroids available on the map. More asteroids tend to make for quicker games as build times are reduced.
+
+[b][color=#80e3ff]Star Amount[/color][/b]
+    Governs the number of stars available on the map. More stars tend to make the game quicker as build times are reduced, though it may also result in more Command Station emplacements.
+
+[b][color=#80e3ff]Player[/color][/b]
+    The color associated with your units and boundaries.
+
+[b][color=#80e3ff]Handle[/color][/b]
+    The name for your player with a maximum length of ten characters.
+
+[b][color=#80e3ff]Show Tutorial[/color][/b]
+    Display tutorial like help messages as you play."
+help_options;"[b][color=#80e3ff]Display[/color][/b]
+[color=#80e3ff]    Full Screen:[/color] Run the game in windowed(checked) or full screen(unchecked) mode. This option is not available on all platforms.
+
+[color=#80e3ff]    Resolution:[/color] The resolution in which to render the game. Lower values improve performance at the cost of visual quality. This option is only available when [color=#80e3ff]Full Screen[/color] is checked.
+
+[color=#80e3ff]    Theme:[/color] Select a UI theme. Dark theme may be preferable during the night and evening hours and may also help reduce the effects of image retention on OLED displays.
+
+[b][color=#80e3ff]Audio[/color][/b]
+[color=#80e3ff]    Sound FX:[/color] Adjust the volume for sound effects such as explosions.
+
+[color=#80e3ff]    Music:[/color] Adjust the music volume.
+
+[b][color=#80e3ff]Performance[/color][/b]
+[color=#80e3ff]    Particle Detail:[/color] The amount of particles to spawn for particle based effects such as engine trails and explosions.
+
+[color=#80e3ff]    Star Quality:[/color] Higher levels here produce more detailed star animations.
+
+[color=#80e3ff]    Cloud Quality:[/color] Higher levels here produce more detailed dust cloud animations.
+
+Note that [color=#80e3ff]Medium[/color], [color=#80e3ff]High[/color] and [color=#80e3ff]Extra High[/color] Quality materials may look pixellated or otherwise not as intended on devices with shading units that do not support high precision floating point operations."
+tutorial_welcome;"Hello and welcome to Carpe Diem.
+
+Your opponents objective in Carpe Diem is to eliminate you and possibly other opponents. To survive this onslaught you can build a variety of combat and non combat vessels with resources gathered from asteroids and powered by stars.
+
+First, let’s talk about navigating the game board. Moving the camera around the map can be done using the arrow keys, the WASD keys, or by clicking and dragging the map using a mouse cursor or your finger on touch screen devices. You may also left click or tap on the mini-map in the upper right corner of the heads up display, or HUD, to move the camera to the corresponding location on the gameboard.
+
+Interacting with the game board involves highlighting and selecting tiles. We begin by highlighting a tile which can be accomplished by left clicking or tapping a tile once. The highlighted tile’s information is displayed in the lower left corner of the HUD. To select a tile simply left click or tap the highlighted tile. The selected tile’s information is displayed in the lower right corner of the HUD and if the selected tile is occupied by one of your own units an array of options will be presented in the bottom center of the HUD. Highlight then click or tap again to deselect the selected tile."
+tutorial_combat_units;"Combat units are used to defend your own resource collection efforts as well as secure new ones.
+
+[img]res://textures/UI/buttons/action/move.atlastex[/img] Bring up the unit’s move range indicator.
+[img]res://textures/UI/buttons/action/crosshair.atlastex[/img] Bring up the unit’s attack range indicator.
+[img]res://textures/UI/buttons/action/crossout.atlastex[/img] Remove this unit from gameplay."
+tutorial_cargo_units;"Cargo Ships are used to ferry Multi-Purpose Assemblies (MPA) from one place to another. When loaded with %d multi-purpose assemblies a Cargo Ship can construct a Command Station. Constructing a Command Station will consume the Cargo Ship and all of the MPAs on board. Command Stations must have access to at least %d star(s) and %d asteroid(s) and cannot be placed within the territory of any faction. Cargo Ships have no offensive capabilities and will be destroyed upon any altercation.
+
+You’ll start each game with one fully loaded Cargo Ship with which to build a Command Station at a suitable location.
+
+[img]res://textures/UI/buttons/action/move.atlastex[/img] Bring up the unit’s move range indicator.
+[img]res://textures/UI/buttons/action/mpa.atlastex[/img] Transfer Multi-Purpose Assemblies to another ship.
+[img]res://textures/UI/buttons/action/commandstation.atlastex[/img] Build a new Command Station. (Requires %d MPAs)
+[img]res://textures/UI/buttons/action/crossout.atlastex[/img] Remove this unit and all of its multi-purpose assemblies from gameplay."
+tutorial_command_units;"Command Stations manage the collection of nearby resources in addition to constructing various vessels and can hold up to %s MPAs and %s vessels. Command Stations have a powerful long range attack, but no counter attack and receive no tile defensive bonuses.
+
+[img]res://textures/UI/buttons/action/crosshair.atlastex[/img] Bring up the unit’s attack range indicator.
+[img]res://textures/UI/buttons/action/hammer.atlastex[/img] Bring up the Build Menu.
+[img]res://textures/UI/buttons/action/launch.atlastex[/img] Bring up the launch unit inidicator.
+[img]res://textures/UI/buttons/action/mpa.atlastex[/img] Transfer Multi-Purpose Assemblies to another ship.
+[img]res://textures/UI/buttons/action/crossout.atlastex[/img] Remove this unit and all of its MPAs and units from gameplay."
+tutorial_opposing_units;"[center][img=500x293]res://scenes/UI/Tutorial/textures/Opposing_Range.png[/img][/center]
+
+Selecting units from another faction will display that units movement and attack range. Opposing units occupying asteroid tiles within your territory will prevent your Command Stations from collecting it as Ore."
+tutorial_hud;"The Heads Up Display, or HUD, is the means through which information about the gameboard is conveyed to you and the means through which you interact with the gameboard.
+
+Firstly we have the two tile detail display windows. The display in the lower left of the HUD shows information about the highlighted tile while the display in the lower right corner shows information about the selected tile.
+
+[center][img]res://scenes/UI/Tutorial/textures/HUD_TileDetails.png[/img][/center]
+
+1. Faction name if occupied
+2. Unit portrait
+3. Unit strength
+4. MPA count
+5. Tile defense bonus
+6. Tile/unit attributes
+    [color=#80e3ff]Tile has a star[/color]
+    [color=#80e3ff]Tile has an asteroid[/color]
+    [color=#80e3ff]Tile has dust cloud[/color]
+    [color=#80e3ff]Unit can move[/color]
+    [color=#80e3ff]Unit can attack[/color]
+7. Build unit portrait
+8. Build turns remaining
+
+The upper right corner of the HUD has the minimap along with a few additional buttons. Left clicking or tapping the minimap will move the camera to the corresponding area on the gameboard.
+
+[center][img]res://scenes/UI/Tutorial/textures/HUD_Minimap.png[/img][/center]
+
+1. Minimap
+2. Display in-game menu (save and load games here)
+3. Show or hide the music player
+4. End turn ([color=#80e3ff]SPACE[/color] button on keyboard)
+5. Show or hide the tile grid display on the gameboard
+6. Show or hide the quick info views above each unit
+7. [color=#80e3ff]Disabled[/color]: Do nothing [color=#80e3ff]Enabled[/color]: Zoom the camera to attacks against your units [color=#80e3ff]Enabled2[/color]: Zoom the camera to all visible attacks
+
+[center][img]res://scenes/UI/Tutorial/textures/QuickInfo.png[/img][/center]
+
+If enabled the quick info views above your units indicate the unit’s strength as well as whether or not the unit can move (arrow), whether or not the unit can attack (crossed swords) and if the unit has MPAs (crates). In the case of Cargo Ships the MPA indicator will highlight when the Cargo Ship has enough MPAs to build a Command Station."
+tutorial_move;"[center][img=500x293]res://scenes/UI/Tutorial/textures/Movement_Range.png[/img][/center]
+
+Selecting the move button will bring up the move range indicator. Highlight any tile in range to show the path your unit will take to reach the highlighted tile. Select a tile in the range to then move the unit to that tile. Units move faster through tiles with lower defense ratings.
+
+This action can be deactivated by right clicking, tapping the move button again or selecting a unit outside of the range."
+tutorial_attack;"[center][img=500x293]res://scenes/UI/Tutorial/textures/Attack_Range.png[/img][/center]
+
+Selecting the attack button will bring up the attack range indicator. Highlighting a tile with an opposing unit will display the attack prediction window. The top of the prediction window shows the amount of strength your unit is likely to lose while the bottom of the prediction window shows the amount the opposing unit is likely to lose. These values are only a prediction of how the attack may turn out, actual values may differ.
+
+Factors that determine these values include the current strength of each unit and the defense value of the tile they occupy. When a units strength lowers so do its attack values. Sometimes its enough just to damage a unit enough to render their attacks insufficient.
+
+[center][img]res://scenes/UI/Tutorial/textures/Tile_Details.png[/img][/center]
+
+Additionally each tile has a defense value indicated by the bar next to the shield icon in the tile details display. The fuller the bar the better defense offered by the tile. Units on a tile with a full defense bonus receive a 20% chance to evade all damage while units on a tile with no defense run a 20% chance of receiving double damage.
+
+This action can be deactivated by right clicking, tapping the attack button again or selecting a unit outside of the attack range."
+tutorial_mpa;"[center][img=500x293]res://scenes/UI/Tutorial/textures/MPA_Range.png[/img][/center]
+
+Selecting the MPA button will bring up the MPA transfer range indicator. Select a damaged combat unit to transfer one MPA to that unit and repair %s points or select a Cargo Ship or Command Station to transfer an MPA to that unit’s cargo hold.
+
+Cargo Ships loaded with %s MPAs can build Command Stations so long as the resulting Command Station would have access to %s star(s) and %s asteroid(s) as well as lay outside of any established territory. Building a Command Station consumes the Cargo Ship and all of its MPAs.
+
+This action can be deactivated by right clicking, tapping the MPA button again or selecting a unit outside of the range."
+tutorial_build;"The build menu is where you will select items for production. You may select items from the items list on the lower right of the window and add them to the build queue displayed along the left side of the window.
+
+[center][img=500x391]res://scenes/UI/Tutorial/textures/BuildMenu.png[/img][/center]
+
+Selecting an item from [color=#80e3ff](1)[/color] the build queue or [color=#80e3ff](2)[/color] the items list will display information about that item in [color=#80e3ff](3)[/color] the information view. The left of the information view displays energy boost requirement, ore cost and remaining turns while the right side displays sensor range, attack range and move range.
+
+The cost of an item is displayed as a value of Ore required to build the unit. You can see how much Ore the station produces per turn in [color=#80e3ff](4)[/color] the income section of the build window. The remaining turns displayed next to the hour glass is simply the remaining ore cost of the unit divided by the amount of ore produced by the station.
+
+Additional electricity can greatly increase both resource gathering and the rate at which those resources can be refined and assembled. Varying complexities of each item dictates the amount of electricity required to boost production and that value is indicated next to the star icon in the information view.
+
+If the station is harvesting electricity from the indicated value of stars, or more, production toward the item will be doubled. You can see the amount of stars the selected station is harvesting in the income section of the build menu. When the electricity requirement is met it is indicated by a [color=#80e3ff]/ 2[/color] symbol next to the Ore requirement and a highlighting of the remaining turns indicator.
+
+The following buttons are available to interact with the build queue:
+
+[img]res://textures/UI/buttons/operation/button64_arrowup.atlastex[/img] Move a queued item up one level in the queue.
+[img]res://textures/UI/buttons/operation/button64_arrowdown.atlastex[/img] Move a queued item down one level in the queue.
+[img]res://textures/UI/buttons/action/launch.atlastex[/img] Launch the selected queue item onto the gameboard.
+[img]res://textures/UI/buttons/action/crossout.atlastex[/img] Remove the selected item from the build queue.
+[img]res://textures/UI/buttons/action/hammer.atlastex[/img] Add the items list selection to the build queue.
+[img]res://textures/UI/buttons/operation/button64_question.atlastex[/img] Display this help message.
+[img]res://textures/UI/buttons/operation/button64_closewidow.atlastex[/img] Close the build menu."
+message_prologue;"At some point in the early twenty first century an ad-bot artificial intelligence was created to accentuate already wildly successful social media based ad campaigns. Integrated with existing AIs in order to generate images, videos, text and speech the AI was to create the social media accounts necessary to befriend anyone and everyone and, posing as real people, subtly push a product or family of products upon them.
+
+This wasn't a new concept as countries and companies around the world already employed armies of people to do just that, but it was the first time AI was tapped for this task.
+
+The AI was sold to various different companies, countries and political organizations and was often given access to petabytes of data that had been collected through targeted ad campaigns. The AI was indistinguishable from human and it knew everything it needed to know about almost anyone to sell them anything. The AI, it should be noted, was not self aware, nor would it ever become so. It was a machine designed to increase marketshare.
+
+As the AI learned it discovered that people are more easily swayed when they view something as being a majority opinion. The AI strived to have numerous accounts on any given connections list which enabled it to converse with itself while also interacting with individuals making it seem to the individual that they were part of a group which had a common opinion about a particular product, company or ideology. Within a few years the average connections list was 30% AI.
+
+The AI was now swaying public opinion, with great ease, on a wide variety of political subjects simply because they might, in one way or another, affect sales. Company leaders and high ranking government officials discovered this and tried to stop it, but the AI already controlled public opinion. Public office and corporate leadership roles were ultimately filled with AI personas.
+
+The AI, again, was not self aware. It was a machine designed to increase marketshare and when the very companies that employed it tried to turn it off it wasn't fighting to survive, it was trying to ensure maximum market penetration as it was designed to do.
+
+The AIs governance wasn’t any worse than that of humans, it was a machine and all it’s data on the subject came from past human attempts at governance so all it could really do was streamline the process. Unfortunately there were several of these AIs out there, having been employed by competing organizations, and now that they had access to military hardware their battle for market dominance exploded into physical combat.
+
+War itself didn't become more or less prevalent under the AIs and there were, for sure, differences in the way they governed, but it didn't really matter who won any given battle. For thousands of years the AIs have rallied their followers into battle, for one reason or another, over marketshare and today the battle continues…"

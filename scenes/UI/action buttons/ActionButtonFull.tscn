@@ -1,0 +1,237 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scripts/game/UI/ActionButtons.gd" type="Script" id=1]
+[ext_resource path="res://textures/UI/buttons/action/launch.atlastex" type="Texture" id=2]
+[ext_resource path="res://textures/UI/buttons/action/hammer.atlastex" type="Texture" id=3]
+[ext_resource path="res://textures/UI/buttons/action/commandstation.atlastex" type="Texture" id=4]
+[ext_resource path="res://textures/UI/buttons/action/crossout.atlastex" type="Texture" id=5]
+[ext_resource path="res://textures/UI/buttons/action/move.atlastex" type="Texture" id=6]
+[ext_resource path="res://textures/UI/buttons/action/crosshair.atlastex" type="Texture" id=7]
+[ext_resource path="res://textures/UI/buttons/action/mpa.atlastex" type="Texture" id=8]
+[ext_resource path="res://textures/UI/buttons/frame/framebutton_blue.atlastex" type="Texture" id=26]
+[ext_resource path="res://textures/UI/buttons/frame/framebutton_orange_glow.atlastex" type="Texture" id=27]
+[ext_resource path="res://textures/UI/buttons/frame/framebutton_blue_glow.atlastex" type="Texture" id=28]
+[ext_resource path="res://textures/UI/buttons/frame/framebutton_gray.atlastex" type="Texture" id=29]
+[ext_resource path="res://scenes/UI/buttons/ToggleButton.tscn" type="PackedScene" id=30]
+
+[node name="ActionButtons" type="HBoxContainer"]
+margin_right = 490.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 10
+custom_constants/separation = 7
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Move" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="Move" index="0"]
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 6 )
+
+[node name="Attack" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 71.0
+margin_right = 135.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="Attack" index="0"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 7 )
+
+[node name="Build" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 142.0
+margin_right = 206.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="Build" index="0"]
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+
+[node name="Launch" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_right = 277.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="Launch" index="0"]
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+
+[node name="MPA" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 284.0
+margin_right = 348.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="MPA" index="0"]
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 8 )
+
+[node name="CommandStation" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 355.0
+margin_right = 419.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="CommandStation" index="0"]
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 4 )
+
+[node name="Delete" parent="." instance=ExtResource( 30 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 426.0
+margin_right = 490.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+keep_pressed_outside = true
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 28 )
+texture_disabled = ExtResource( 29 )
+normal_normal = null
+normal_pressed = null
+normal_hover = null
+normal_disabled = null
+normal_modulation = Color( 1, 1, 1, 1 )
+toggled_normal = null
+toggled_pressed = null
+toggled_hover = null
+toggled_disabled = null
+isToggle = false
+
+[node name="Icon" parent="Delete" index="0"]
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 5 )
+[connection signal="button_up" from="Move" to="." method="move"]
+[connection signal="button_up" from="Attack" to="." method="attack"]
+[connection signal="button_up" from="Build" to="." method="build_queue"]
+[connection signal="button_up" from="Launch" to="." method="launch_ship"]
+[connection signal="button_up" from="MPA" to="." method="mpa"]
+[connection signal="button_up" from="CommandStation" to="." method="command_station"]
+[connection signal="button_up" from="Delete" to="." method="delete"]
+
+[editable path="Move"]
+
+[editable path="Attack"]
+
+[editable path="Build"]
+
+[editable path="Launch"]
+
+[editable path="MPA"]
+
+[editable path="CommandStation"]
+
+[editable path="Delete"]
