@@ -11,6 +11,12 @@ While a game of Carpe Diem does require the setup and expansion of resource coll
 
 - Music player allows you to control in-game music playback
 
+Official builds available at:
+
+[<img src="https://1337atr.weebly.com/files/theme/imgs/buttons/1337Button_gears.png"
+      alt="Get it at 1337 Gallery"
+      height="80">](https://1337atr.weebly.com/carpediem.html)
+
 [<img 
 src="https://1337atr.weebly.com/files/theme/games/carpediem/CarpeDiem_Screen01.png"
  alt="Carpe Diem Screen" width="512" height="288">](https://1337atr.weebly.com/files/theme/games/carpediem/CarpeDiem_Screen01.png)
