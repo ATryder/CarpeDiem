@@ -36,6 +36,8 @@ func _ready():
 func init():
 	if Opts.particleDetail == Opts.QUALITY_HIGH:
 		particlesPerSecond *= 2
+	elif Opts.particleDetail == Opts.QUALITY_XHIGH:
+		particlesPerSecond *= 3
 	
 	var arrayLength = ceil(maxLife * particlesPerSecond)
 	var st = SurfaceTool.new()

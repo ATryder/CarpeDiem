@@ -67,7 +67,7 @@ func spawn_launch_effects(tile : CDTile, player):
 		Opts.QUALITY_HIGH:
 			particles.numParticles = 350
 		Opts.QUALITY_XHIGH:
-			particles.numParticles = 1000
+			particles.numParticles = 600
 		_:
 			particles.numParticles = 60
 	add_effects(particles)
