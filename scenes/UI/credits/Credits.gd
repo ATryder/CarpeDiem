@@ -1,4 +1,4 @@
-extends PanelContainer
+extends PanelContainer_Themeable
 
 onready var creditsAnim : AnimationPlayer = get_node("CreditsDisplay/AnimationPlayer")
 
