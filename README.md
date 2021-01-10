@@ -5,6 +5,8 @@ In Carpe Diem you must find and secure asteroid clusters to build an armada nece
 
 While a game of Carpe Diem does require the setup and expansion of resource collection and unit production, the focus of the game is largely on tactical combat. The majority of your time in Carpe Diem will be spent commanding units on the offensive or defensive and anticipating which units to build next. There is no technology tree, all players are on equal footing in terms of what units they can field.
 
+Building Carpe Diem requires Godot Engine 3.2.3-stable.
+
 - Requires no permissions
 
 - Customizeable random map generator
