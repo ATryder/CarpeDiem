@@ -45,9 +45,8 @@ func exec(data):
 			continue
 		
 		if is_surrounded(station.tile):
-			if !is_surrounded_by_enemies(station.tile):
-				relaunchStations.push_back(station)
-				continue
+			relaunchStations.push_back(station)
+			continue
 			
 		mai.launch.push_back(station)
 	wait = !mai.launch.empty()
