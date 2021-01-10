@@ -1,8 +1,8 @@
 extends Reference
 class_name SavedGame
 
-const VERSION_INT := 2
-const VERSION := "1.0.1"
+const VERSION_INT := 3
+const VERSION := "1.0.2"
 
 const EXTENSION := "cdsav"
 
@@ -571,6 +571,8 @@ func load_game() -> LoadedGame:
 		for i in range(numPlayers):
 			if file.get_8():
 				tile.mapped[i] = true
+				if noFog && !allVis:
+					tile.unitVis[i] = 1
 			else:
 				tile.mapped[i] = false
 		
