@@ -1,7 +1,7 @@
 extends Node
 
-const VERSION_INT := 2
-const VERSION := "1.0.1"
+const VERSION_INT := 3
+const VERSION := "1.0.2"
 
 const BASE_TILE_SIZE = 16.0
 const TILE_WIDTH = 16.0
