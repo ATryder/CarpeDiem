@@ -57,6 +57,5 @@ tracks/0/keys = {
 material_override = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
-autoplay = "start"
 anims/start = SubResource( 4 )
 anims/stop = SubResource( 5 )

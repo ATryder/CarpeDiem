@@ -40,6 +40,8 @@ func _ready():
 				cone.material_override.set_shader_param("mask_tex", arena.fogControl.get_mask())
 				cone.material_override.set_shader_param("mask_offset", arena.fogControl.get_mask_offset())
 				cone.material_override.set_shader_param("mask_scale", arena.fogControl.get_mask_world_scale())
+		for plume in enginePlumes:
+			plume.play("start")
 	
 	findSparks(self, get_node("/root/Game/Effects"))
 	if Opts.particleDetail == Opts.QUALITY_LOW:
