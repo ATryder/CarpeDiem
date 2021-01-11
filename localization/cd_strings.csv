@@ -216,7 +216,7 @@ You’ll start each game with one fully loaded Cargo Ship with which to build a 
 [img]res://textures/UI/buttons/action/mpa.atlastex[/img] Transfer Multi-Purpose Assemblies to another ship.
 [img]res://textures/UI/buttons/action/commandstation.atlastex[/img] Build a new Command Station. (Requires %d MPAs)
 [img]res://textures/UI/buttons/action/crossout.atlastex[/img] Remove this unit and all of its multi-purpose assemblies from gameplay."
-tutorial_command_units;"Command Stations manage the collection of nearby resources in addition to constructing various vessels and can hold up to %s MPAs and %s vessels. Command Stations have a powerful long range attack, but no counter attack and receive no tile defensive bonuses.
+tutorial_command_units;"Command Stations manage the collection of nearby resources in addition to constructing various vessels and can hold up to %s MPAs and %s vessels. Command Stations have a powerful long range attack, but no counter attack and receive no tile defensive bonuses. When damaged Command Stations automatically repair %s point at the start of each turn.
 
 [img]res://textures/UI/buttons/action/crosshair.atlastex[/img] Bring up the unit’s attack range indicator.
 [img]res://textures/UI/buttons/action/hammer.atlastex[/img] Bring up the Build Menu.

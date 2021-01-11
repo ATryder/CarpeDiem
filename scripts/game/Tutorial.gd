@@ -65,7 +65,7 @@ func tile_selected(tile):
 				CD.UNIT_COMMAND_STATION:
 					if tutorialSegments.has(COMMAND_UNIT):
 						tutorialSegments.erase(COMMAND_UNIT)
-						dialog = get_dialog(tr("tutorial_command_units") % [CD.COMMAND_STATION_MAX_MPA, 4], tr("label_command_stations"))
+						dialog = get_dialog(tr("tutorial_command_units") % [CD.COMMAND_STATION_MAX_MPA, 4, 1], tr("label_command_stations"))
 				_:
 					if tutorialSegments.has(COMBAT_UNIT):
 						tutorialSegments.erase(COMBAT_UNIT)
