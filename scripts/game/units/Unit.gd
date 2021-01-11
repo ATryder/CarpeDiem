@@ -405,7 +405,7 @@ func get_total_attack_range():
 		var surrounding = tiles[count].get_surrounding()
 		for t in surrounding:
 			var totalCost = costs[count] + t.movementCost
-			if totalCost <= moveRange and !t.is_occupied():
+			if totalCost - moveRange <= 0.00000000001 && (!t.is_occupied() || !t.is_visible(player.game.thisPlayer)):
 				var idx = tiles.find_last(t)
 				if idx >= 0:
 					if totalCost < costs[idx]:
@@ -427,19 +427,21 @@ func get_total_attack_range():
 					acosts.push_back(0.0)
 			elif !mTiles.has(t):
 				totalCost = acosts[count] + 1.0
-				if totalCost <= attackRange:
+				if totalCost - attackRange <= 0.00000000001:
 					var idx = tiles.find_last(t)
 					if idx >= 0:
 						if totalCost < acosts[idx]:
 							acosts.remove(idx)
 							acosts.push_back(totalCost)
-							var cost = costs[idx]
-							costs.remove(idx)
-							costs.push_back(cost)
+							if !t.is_occupied() && costs[count] + t.movementCost < costs[idx]:
+								costs.remove(idx)
+								costs.push_back(costs[count] + t.movementCost)
+							else:
+								costs.remove(idx)
+								costs.push_back(10000000.0)
 							tiles.remove(idx)
 							tiles.push_back(t)
-							if aTiles.has(t):
-								aTiles.erase(t)
+							aTiles.erase(t)
 							aTiles.push_back(t)
 					else:
 						tiles.push_back(t)
@@ -447,7 +449,7 @@ func get_total_attack_range():
 						if !t.is_occupied():
 							costs.push_back(costs[count] + t.movementCost)
 						else:
-							costs.push_back(10000000)
+							costs.push_back(10000000.0)
 						acosts.push_back(totalCost)
 		count += 1
 	tiles.pop_front()
