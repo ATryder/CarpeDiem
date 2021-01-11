@@ -278,11 +278,11 @@ func get_movement_range(tiles = []):
 						var idx = tiles.find_last(t)
 						if idx >= 0:
 							if totalCost < costs[idx]:
-								#costs[idx] = totalCost
 								tiles.remove(idx)
 								costs.remove(idx)
 								tiles.push_back(t)
 								costs.push_back(totalCost)
+								count -= 1
 						else:
 							tiles.push_back(t)
 							costs.push_back(totalCost)
@@ -301,11 +301,11 @@ func get_movement_range(tiles = []):
 					var idx = tiles.find_last(t)
 					if idx >= 0:
 						if totalCost < costs[idx]:
-							#costs[idx] = totalCost
 							tiles.remove(idx)
 							costs.remove(idx)
 							tiles.push_back(t)
 							costs.push_back(totalCost)
+							count -= 1
 					else:
 						tiles.push_back(t)
 						costs.push_back(totalCost)
@@ -420,6 +420,7 @@ func get_total_attack_range():
 						if mTiles.has(t):
 							mTiles.erase(t)
 						mTiles.push_back(t)
+						count -= 1
 				else:
 					tiles.push_back(t)
 					mTiles.push_back(t)
@@ -443,6 +444,7 @@ func get_total_attack_range():
 							tiles.push_back(t)
 							aTiles.erase(t)
 							aTiles.push_back(t)
+							count -= 1
 					else:
 						tiles.push_back(t)
 						aTiles.push_back(t)
