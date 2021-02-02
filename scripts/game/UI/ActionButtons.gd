@@ -109,7 +109,7 @@ func set_disabled(disable : bool):
 			if button.has_method("set_disabled"):
 				button.disabled = true
 		return
-	elif tile.unit.is_animating() || game.hud.disabled:
+	elif tile.unit == null || tile.unit.is_animating() || game.hud.disabled:
 		return 
 	
 	for button in get_children():
