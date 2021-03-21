@@ -44,7 +44,8 @@ func get_command_stations() -> Array:
 func get_command_station_tile(station) -> CDTile:
 	var stations = units[CD.UNIT_COMMAND_STATION]
 	for tile in stations:
-		if stations[tile] == station:
+		var s = stations[tile]
+		if !(s is int) && s == station:
 			return tile
 	return null
 

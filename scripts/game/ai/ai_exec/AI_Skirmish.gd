@@ -233,9 +233,10 @@ func exec(data):
 		if !cancel:
 			var enemyStations = player.factionManager.get_command_stations()
 			for station in enemyStations:
-				var csTile = player.factionManager.get_command_station_tile(station)
-				if csTile != null:
-					tasks.push_back(AI_Task_AttackStation.new(station, csTile))
+				if station is CommandStation:
+					var csTile = player.factionManager.get_command_station_tile(station)
+					if csTile != null:
+						tasks.push_back(AI_Task_AttackStation.new(station, csTile))
 		
 		mai.lock()
 		cancel = mai.cancel
