@@ -793,6 +793,8 @@ func get_relevant_repair_unit(damagedUnit : Unit, stations : Array, cargoships :
 func search_for_station_areas(mai, stationAreas := [], store := []) -> float:
 	stationAreas.clear()
 	var numMapped := 0.0
+	var store2 := []
+	var stnTiles := []
 	for x in range(player.arena.MAP_WIDTH):
 		mai.lock()
 		if mai.cancel:
@@ -803,8 +805,12 @@ func search_for_station_areas(mai, stationAreas := [], store := []) -> float:
 			var tile = player.arena.get_tile(x, y)
 			if tile.mapped[player.num]:
 				numMapped += 1.0
-				if !tile.is_collected():
-					add_sighted_possible_station_area(tile, stationAreas, store)
+				if !tile.is_collected() && tile.has_star():
+					var starRange = Math.get_resource_tiles(tile, store2)
+					for t in starRange:
+						if !t.is_collected() && !stnTiles.has(t):
+							if add_sighted_possible_station_area(t, stationAreas, store) != null:
+								stnTiles.push_back(t)
 	
 	return numMapped / (player.arena.MAP_WIDTH * player.arena.MAP_HEIGHT)
 
@@ -813,6 +819,8 @@ func add_sighted_possible_station_area(tile : CDTile, stationAreas : Array, stor
 	var psa := PossibleStationArea.new(tile, player, Math.get_resource_tiles(tile, store))
 	if !psa.nearbyStation && psa.energy >= 1 && psa.ore >= 2 && psa.ore + min(8.0, psa.energy * 2) >= 4:
 		stationAreas.push_back(psa)
+		return psa
+	return null
 
 
 func get_available_cargo_travel_tiles(mai, availableArena, destroyedStations := []) -> Array:
