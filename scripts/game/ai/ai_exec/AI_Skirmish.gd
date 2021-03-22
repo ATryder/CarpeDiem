@@ -822,29 +822,23 @@ func get_available_cargo_travel_tiles(mai, availableArena, destroyedStations := 
 	availableArena = player.game.arena.ARENA.duplicate()
 	var stations = []
 	
-	for x in range(player.arena.MAP_WIDTH):
+	for p in player.game.players:
 		mai.lock()
 		if mai.cancel:
 			mai.unlock()
 			return availableArena
 		mai.unlock()
-		for y in range(player.arena.MAP_HEIGHT):
-			var tile = player.arena.get_tile(x, y)
-			if (tile.is_collected() && tile.collectors[0].player != player
-					&& !stations.has(tile.collectors[0])):
-				stations.push_back(tile.collectors[0])
-	
-	for stn in stations:
-		mai.lock()
-		if mai.cancel:
-			mai.unlock()
-			return availableArena
-		mai.unlock()
-		if player.factionManager.has_station(stn):
-			availableArena.erase(stn.tile)
-			var attackRange = Math.get_attack_tiles(stn.tile, stn.attackRange, stn.minAttackRange)
-			for aTile in attackRange:
-				availableArena.erase(aTile)
+		
+		if p.num == player.num:
+			continue
+		
+		var factionStations = p.get_command_stations()
+		for stn in factionStations:
+			if player.factionManager.has_station(stn):
+				availableArena.erase(stn.tile)
+				var attackRange = Math.get_attack_tiles(stn.tile, stn.attackRange, stn.minAttackRange)
+				for aTile in attackRange:
+					availableArena.erase(aTile)
 	
 	return availableArena
 
