@@ -808,7 +808,7 @@ func search_for_station_areas(mai, stationAreas := [], store := []) -> float:
 				if !tile.is_collected() && tile.has_star():
 					var starRange = Math.get_resource_tiles(tile, store2)
 					for t in starRange:
-						if !t.is_collected() && !t.has_star() && !stnTiles.has(t):
+						if !t.is_collected() && !stnTiles.has(t):
 							stnTiles.push_back(t)
 							add_sighted_possible_station_area(t, stationAreas, store)
 	
