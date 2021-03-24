@@ -233,10 +233,9 @@ func exec(data):
 		if !cancel:
 			var enemyStations = player.factionManager.get_command_stations()
 			for station in enemyStations:
-				if station is CommandStation:
-					var csTile = player.factionManager.get_command_station_tile(station)
-					if csTile != null:
-						tasks.push_back(AI_Task_AttackStation.new(station, csTile))
+				var csTile = player.factionManager.get_command_station_tile(station)
+				if csTile != null:
+					tasks.push_back(AI_Task_AttackStation.new(station, csTile))
 		
 		mai.lock()
 		cancel = mai.cancel
@@ -808,7 +807,7 @@ func search_for_station_areas(mai, stationAreas := [], store := []) -> float:
 				if !tile.is_collected() && tile.has_star():
 					var starRange = Math.get_resource_tiles(tile, store2)
 					for t in starRange:
-						if !t.is_collected() && !stnTiles.has(t):
+						if t.mapped[player.num] && !t.is_collected() && !stnTiles.has(t):
 							stnTiles.push_back(t)
 							add_sighted_possible_station_area(t, stationAreas, store)
 	
