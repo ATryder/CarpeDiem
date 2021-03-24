@@ -59,7 +59,7 @@ func unit_sighted(unit) -> bool:
 	
 	var typedUnits = units[unit.type]
 	if unit.type == CD.UNIT_COMMAND_STATION:
-		if !typedUnits.has(unit.tile) || typedUnits[unit.tile] != unit:
+		if !typedUnits.has(unit.tile) || typedUnits[unit.tile] is int || typedUnits[unit.tile] != unit:
 			typedUnits[unit.tile] = unit
 			return true
 		return false
