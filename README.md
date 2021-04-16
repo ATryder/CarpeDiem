@@ -1,9 +1,9 @@
 Carpe Diem
 ==================
 
-In Carpe Diem you must find and secure asteroid clusters to build an armada necessary to defend your operation and exterminate that of up to six AI opponents on randomly generated maps. Secure stars and harvest solar energy to fuel your operation and boost production at nearby space stations.
+Humanity has been taken over by artificial intelligences vying for the lion's share of the galaxy! Take control of your faction and stake your claim against up to six AI opponents on thousands upon thousands of randomly generated maps. Build powerful Command Stations to control resources and raise an armada to expand your territory and obliterate your adversaries!
 
-While a game of Carpe Diem does require the setup and expansion of resource collection and unit production, the focus of the game is largely on tactical combat. The majority of your time in Carpe Diem will be spent commanding units on the offensive or defensive and anticipating which units to build next. There is no technology tree, all players are on equal footing in terms of what units they can field.
+Customize your play experience with a variety of options to control random map generation to your preference. Looking for a quick game to pass the time on the bus? Jack up the resource frequency and lower the map dimensions. Looking for something a bit more challenging? Crank up the difficulty and tick Allied AI to tip the odds in favor of your opponents. Oh and by the way, the AI never cheats!
 
 Building Carpe Diem requires Godot Engine 3.2.3-stable.
 
