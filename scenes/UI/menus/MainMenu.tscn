@@ -293,6 +293,7 @@ margin_bottom = 600.0
 fadeIn = false
 gameIntro = true
 initialIntro = true
+
 [connection signal="toggled" from="MarginContainer/VBoxContainer/PanelContainer/Buttons/Button_New" to="." method="_new"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/PanelContainer/Buttons/Button__Prologue" to="." method="_prologue"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/PanelContainer/Buttons/Button_Load" to="." method="_load"]
