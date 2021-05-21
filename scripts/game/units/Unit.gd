@@ -655,6 +655,8 @@ func delete():
 	if tile != null:
 		if player.game.hud.selectedTile == tile:
 			player.game.hud.mouseControl.indicators.clear()
+			if player.is_local_player() && player.game.is_local_turn():
+				player.game.hud.close_action_button_display()
 			
 		tile.unit = null
 		if type == CD.UNIT_COMMAND_STATION:
