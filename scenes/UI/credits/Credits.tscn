@@ -327,9 +327,9 @@ anims/Credits = SubResource( 3 )
 
 [node name="Credits" type="Control" parent="CreditsDisplay"]
 visible = false
-margin_top = -4591.91
+margin_top = -5300.0
 margin_right = 40.0
-margin_bottom = -4551.91
+margin_bottom = -5260.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -709,9 +709,9 @@ texture = ExtResource( 8 )
 [node name="1337 Gallery" type="Label" parent="CreditsDisplay"]
 visible = false
 margin_left = 273.0
-margin_top = 162.0
+margin_top = 135.0
 margin_right = 611.0
-margin_bottom = 206.0
+margin_bottom = 179.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "1337 Gallery"
@@ -720,13 +720,16 @@ __meta__ = {
 }
 
 [node name="address" type="Label" parent="CreditsDisplay/1337 Gallery"]
-margin_left = -19.0
-margin_top = 60.0
-margin_right = 387.0
-margin_bottom = 82.0
+margin_left = -46.0
+margin_top = 61.0
+margin_right = 388.0
+margin_bottom = 133.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "https://1337atr.weebly.com"
+text = "inventati.org/1337gallery
+-or-
+1337atr.weebly.com"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

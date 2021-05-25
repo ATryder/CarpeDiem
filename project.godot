@@ -376,7 +376,8 @@ _global_script_class_icons={
 
 config/name="Carpe Diem"
 run/main_scene="res://scenes/UI/menus/MainMenu.tscn"
-boot_splash/image="res://black32.png"
+boot_splash/image="res://ATR_Splash.png"
+boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 config/windows_native_icon="res://icons/icon.ico"
