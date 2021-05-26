@@ -21,7 +21,7 @@ Official builds available at:
 
 [<img src="https://1337atr.weebly.com/files/theme/imgs/buttons/1337Button_gears.png"
       alt="Get it at 1337 Gallery"
-      height="80">](https://www.inventati.org/games/carpediem/carpediem.html)
+      height="80">](https://www.inventati.org/1337gallery/games/carpediem/carpediem.html)
 
 [<img 
 src="https://raw.githubusercontent.com/ATryder/CarpeDiem/main/metadata/en-US/images/phoneScreenshots/1.png"
