@@ -5,7 +5,7 @@ Humanity has been taken over by artificial intelligences vying for the lion's sh
 
 Customize your play experience with a variety of options to control random map generation to your preference. Looking for a quick game to pass the time on the bus? Jack up the resource frequency and lower the map dimensions. Looking for something a bit more challenging? Crank up the difficulty and tick Allied AI to tip the odds in favor of your opponents. Oh and by the way, the AI never cheats!
 
-Building Carpe Diem requires Godot Engine 3.3-stable.
+Building Carpe Diem requires Godot Engine 3.3.2-stable.
 
 - Requires no permissions
 
@@ -19,7 +19,7 @@ Building Carpe Diem requires Godot Engine 3.3-stable.
 
 Official builds available at:
 
-[<img src="https://1337atr.weebly.com/files/theme/imgs/buttons/1337Button_gears.png"
+[<img src="https://www.inventati.org/1337gallery/imgs/buttons/1337Button_gears.png"
       alt="Get it at 1337 Gallery"
       height="80">](https://www.inventati.org/1337gallery/games/carpediem/carpediem.html)
 

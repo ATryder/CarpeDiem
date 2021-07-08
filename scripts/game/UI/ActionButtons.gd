@@ -281,6 +281,8 @@ func command_station():
 	var stars = 0
 	var asteroids = 0
 	for t in collectionTiles:
+		if !t.collectors.empty():
+			continue
 		if t.has_star():
 			stars += 1
 		if t.has_asteroid():
