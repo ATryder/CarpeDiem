@@ -17,7 +17,7 @@ Building Carpe Diem requires Godot Engine 3.3.2-stable.
 
 - Music player allows you to control in-game music playback
 
-Official builds available at:
+Source code and official builds available at:
 
 [<img src="https://www.inventati.org/1337gallery/imgs/1337Button_gears.png"
       alt="Get it at 1337 Gallery"
